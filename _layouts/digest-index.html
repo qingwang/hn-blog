@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<style>
+  .lang-switch { float: right; margin: 0.4em 0 0 1em; font-size: 0.95em; }
+  .lang-switch a + a { margin-left: 0.7em; }
+</style>
+<div class="home">
+  <nav class="lang-switch">
+    {%- assign indexes = site.pages | where: "layout", "digest-index" -%}
+    {%- for p in indexes -%}{%- if p.lang != page.lang %}
+    <a href="{{ p.url | relative_url }}" hreflang="{{ p.lang }}" lang="{{ p.lang }}">{{ p.lang_name }}</a>
+    {%- endif -%}{%- endfor %}
+  </nav>
+  <h1 class="page-heading">{{ page.heading }}</h1>
+  {%- assign posts = site.posts | where: "lang", page.lang %}
+  <ul class="post-list">
+    {%- for post in posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>
+      <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>

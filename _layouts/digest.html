@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<style>
+  .lang-switch { float: right; margin: 0.4em 0 0 1em; font-size: 0.95em; }
+  .lang-switch a + a { margin-left: 0.7em; }
+</style>
+<article class="post h-entry">
+  <header class="post-header">
+    <nav class="lang-switch">
+      {%- assign versions = site.posts | where: "ref", page.ref -%}
+      {%- for p in versions -%}{%- if p.lang != page.lang %}
+      <a href="{{ p.url | relative_url }}" hreflang="{{ p.lang }}" lang="{{ p.lang }}">{{ p.lang_name }}</a>
+      {%- endif -%}{%- endfor %}
+    </nav>
+    <h1 class="post-title p-name">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.minima.date_format }}</time>
+      · <a href="{{ page.index_url | relative_url }}">{{ page.all_label }}</a>
+    </p>
+  </header>
+  <div class="post-content e-content">
+    {{ content }}
+  </div>
+</article>
