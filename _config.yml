@@ -4,8 +4,8 @@ title: "Hacker News digest"
 description: Twice-daily summaries of the Hacker News front page and its discussions.
 lang: en
 timezone: Europe/London
-url: https://qingwang.github.io
-baseurl: "/hn-blog"
+url: https://hn.due.io
+baseurl: ""
 theme: minima
 show_excerpts: false
 minima:
