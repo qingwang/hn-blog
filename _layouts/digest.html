@@ -12,6 +12,9 @@ layout: default
       {%- for p in versions -%}{%- if p.lang != page.lang %}
       <a href="{{ p.url | relative_url }}" hreflang="{{ p.lang }}" lang="{{ p.lang }}">{{ p.lang_name }}</a>
       {%- endif -%}{%- endfor %}
+      {%- if page.feed_url %}
+      <a href="{{ page.feed_url | relative_url }}" type="application/atom+xml">RSS</a>
+      {%- endif %}
     </nav>
     <h1 class="post-title p-name">{{ page.title | escape }}</h1>
     <p class="post-meta">
