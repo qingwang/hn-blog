@@ -5,8 +5,248 @@
   <subtitle>每日两次的 Hacker News 摘要，每篇文章一条。</subtitle>
   <link rel="self" type="application/atom+xml" href="https://hn.due.io/feed/stories-zh-cn.xml"/>
   <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/"/>
-  <updated>2026-11-27T19:59:59+00:00</updated>
+  <updated>2026-11-28T07:59:59+00:00</updated>
   <author><name>Hacker News 摘要</name></author>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50674218-zh-cn</id>
+    <title>Unkernel：真正的 Linux 内核，编译为 WebAssembly</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-1"/>
+    <published>2026-11-28T07:59:59+00:00</published>
+    <updated>2026-11-28T07:59:59+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 1 名 · &lt;a href="https://unkernel.dev"&gt;unkernel.dev&lt;/a&gt; · 197 分 · 36 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50674218"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Unkernel: Real Linux kernel, compiled to WebAssembly&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Unkernel（unkernel.dev）是一个把真正的 Linux 内核编译成 WebAssembly 的项目，使它完全在浏览器标签页内启动并运行，自带 shell、GUI 应用，以及评论者所说的「非常快的 Wayland 合成器」。链接页面本身几乎没有可读文本，所以细节来自讨论帖：启动几乎瞬间完成，网络似乎通过项目服务器中转（对 ip-api.com 的 curl 报告的是苏黎世，而不是用户自己的 IP），并且它依赖 JSPI，在 iPhone/iPad 上这意味着需要 iOS/iPadOS 27 或更高版本（Safari 18）。评论者指出它五天前就已经被发过（item 50533945）。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;未能读取原文：page had almost no readable text (probably needs JavaScript or a login)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论帖里主要是惊喜的不敢相信——有几个人说它在手机和 iPad 上运行流畅，启动只需几百毫秒——同时夹杂着一股真诚的「这东西有什么用？」的声音，有人回答「是为了挑战和展示」，以及为学生免费提供每人一个 Linux 环境这一教育角度，但有人反驳说学生从 2008 年起就能跑虚拟机了，真正的收益是省掉两个小时的配置时间。有相邻项目的人对这种说法提出反对：一位评论者说他一直在做一个更轻量的「wasm 的 POSIX 运行时」方案（dolly、slopshare.dev），大多数工作负载并不需要内核 90% 的东西；另一些人则把 tabc、tabernets、trynix.dev 和一个浏览器里的 PDP-10 模拟器列为同一类。有真实的第一手测试：4 个并发的 md5sum 与单个 md5sum 的墙钟时间相同；可以在 Unkernel 里安装 Chromium；一位评论者在一台 2026 年的 Mac mini 上通过 trynix.dev 在 Unkernel 里启动了 Unkernel，不过嵌套的 Chromium 没能跑起来。也有人纠正错误——iPad 没有 128 GB 内存（那是 SSD）；有人质疑与 macOS 臃肿的对比；还有人问「真正的内核」是要和什么假内核区分开，愤世嫉俗的解读是「这是个 AI 起的标题」。代理网络出口引发了实际担忧：这项服务实际上兼作免费代理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675427"&gt;kkm&lt;/a&gt;: 一条敏锐的架构观察：浏览器标签页里的 curl 从苏黎世出口，意味着流量是经由项目服务器中转，而不是走用户自己的网络连接；另一位评论者指出这实际上等于一个免费代理。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674967"&gt;logicallee&lt;/a&gt;: 给出了在 Unkernel 里运行 Unkernel 的精确逐步操作——在 shell 里输入 chromium，然后在嵌套浏览器里从 trynix.dev 加载一个小包——并附上在 Unkernel 里跑 Doom 的演示链接。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675644"&gt;daugasauron&lt;/a&gt;: 一个走竞争路线「wasm 的 POSIX 运行时」（dolly、slopshare.dev）的作者认为，Unkernel 对比表里那三个大红色叉号并不重要，因为大多数 agent 沙箱只需要内核的一小部分。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50672565-zh-cn</id>
+    <title>谷歌的 DeepCrossAttention 在模型质量相当的情况下速度最高提升 3 倍</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-2"/>
+    <published>2026-11-28T07:59:58+00:00</published>
+    <updated>2026-11-28T07:59:58+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 3 名 · &lt;a href="https://research.google/blog/supercharging-transformer-residual-connections/"&gt;research.google&lt;/a&gt; · 330 分 · 134 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50672565"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Google&amp;#x27;s DeepCrossAttention achieves comparable model quality up to 3x faster&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是 Google Research 的一篇博客文章，作者是 Kyriakos Axiotis 和 Thomas Fu，介绍了 DeepCrossAttention（DCA）。该架构出自他们的 ICML 2025 论文（arXiv 2502.06785），它用对所有先前层输出的、可学习的逐 token 路由权重来替代固定的加法残差连接，并加入了深度方向的交叉注意力（拆分 Q/K/V），即跨层而非跨 token 进行注意力计算。其声称的效果包括：在模型质量相同的前提下，训练步数最多减少到原来的 1/5（速度最高提升 3 倍），额外参数占比不足 0.2%；在 LM1B 上，30 层时困惑度就降到 14 以下，而标准 transformer 需要 42 层，相当于深度削减了 29%。由于 DCA 可以被初始化成与标准残差网络完全一致的行为，因此它可以被加装到预训练模型上；短暂的持续训练使 LM1B 困惑度下降 0.19，而标准做法下的持续训练只下降 0.02。文章还将 DCA 与 Moonshot AI 的 attention residuals（包括 Block AttnRes 变体）、Thinking Machines 的 Inkling 2、hyper-connections 以及 manifold-constrained hyper-connections 进行了对比。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 几乎没有人讨论这个架构。整个讨论串绝大多数都是在争论谷歌 Gemini「Neon」模型与 Claude Opus 5.5 的订阅问题：Neon 是否真的更好、按实际任务计算是否真的更便宜，以及各自消耗配额的快慢（有几个人说几分钟内就撞上 5 小时上限；另一些人说每周配额每天都会重置）。持怀疑态度的一方拿出了数据：seizethecheese 发布了来自一个名为「Agent Duel」的正面对比数据集的计时结果，显示 Neon 每个任务的实际耗时其实比 Opus 5.5 和 Astra 6.2 更慢；thurn 记录了配额指标并做了盲测，发现 Claude 在相同价格下多提供 25-35% 的价值，并把原因归于 Antigravity 的「agy」运行框架以及更差的缓存——而 Neon 的支持者则以在困难任务上一次成功的案例和对它非编程领域「风味」的称赞来回应。少数切题的人指出这篇论文已有 1.5 年（2025 年 2 月发表，2025 年 7 月修订），并好奇博客文章为什么拖了这么久；有人吐槽「Densenet anyone？」，有人挑剔图里用折线图而不是柱状图，还有人推测 DCA 可能有助于解决跨层回忆类问题，例如数「strawberry」里有多少个字母。反复出现的元评论是：这里的「更快」指的是训练而不是推理，以及一个带讽刺意味的说法——谷歌发表某项技术，往往意味着它自己并没有在用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674837"&gt;thurn&lt;/a&gt;: 详细记录了配额指标，并对相同工单做了盲测：Claude 每美元订阅费多提供 25-35% 的价值，主要是因为 Antigravity 的「agy」运行框架比 Claude 的消耗更多 token、缓存效果更差，而且盲评给 Opus 的方案打分更高。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674842"&gt;amluto&lt;/a&gt;: 认为深度方向交叉注意力可能真正解决 token 级计数失败的问题：早期层对原始输入的 K/V 表示，可以被已经理解目标的后续层再次查询——但也承认存在 tokenization 问题，以及缺少一个干净的「统计命中次数」操作。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673144"&gt;ACCount39&lt;/a&gt;: 贴出了完整论文（arxiv.org/abs/2502.06785），并把 DCA 放在深度方向注意力原语的谱系中，与 Moonshot 更知名的 AttnRes 并列，认为循环层可以放大从可学习层间路由中获得的收益。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50657346-zh-cn</id>
+    <title>《Balatro》时间线</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-3"/>
+    <published>2026-11-28T07:59:57+00:00</published>
+    <updated>2026-11-28T07:59:57+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 4 名 · &lt;a href="https://localthunk.com/blog/balatro-timeline-3aarh"&gt;localthunk.com&lt;/a&gt; · 288 分 · 65 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50657346"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: The Balatro Timeline&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是 LocalThunk 自己写的《Balatro》开发日记，写于开发三年之际，内容覆盖到游戏正式发售当天：项目始于 2021 年 12 月，当时只是他 Learning/Lua 目录下的一个「template」文件夹，从一款被放弃的游戏 Autohike 转来，最初是朋友们一款卡牌游戏的在线多人版本，后来 CHIP × MULT 的计分思路和 Joker 才让它变成了《Balatro》。他一边做着一份 IT 工作一边利用晚上和周末开发；当伴侣因读博需要搬到外省时，他辞了职，给自己 3–6 个月全职开发时间；他花 100 美元支付 Steam 费用，在 Fiverr 上委托 Luis Clemente 制作原声音乐，从约 20 个没人喜欢的名字里挑中了「Balatro」，直到 2024 年 5 月才第一次玩《Slay the Spire》——之后首个公开测试版上线，正如他所料，毫无反响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串在《Balatro》的成功有多少靠运气这一点上分歧很大。一方（呼应文中提到的 Dan Gheesling 时刻）认为这款游戏之所以火起来，只是因为一位大主播发现了它，并说「被大 YouTube 频道选中」就像中彩票，还引用数据称约 2% 的 Steam 游戏收入超过 1 万美元；另一方反驳说，成千上万款由主播推广的游戏都毫无起色，正是《Balatro》立刻上瘾的钩子才接住了这道闪电，一位评论者要求举出真正优秀却失败的游戏实例，另一位举了 Cinco Paus 和 Corrypt，却被告知其美术风格决定了它们不可能有大众吸引力。另一场争论担心 LLM 时代的抄袭会扼杀《Balatro》走过的慢热路径，有人用具体案例回应（靠移动广告驱动的抄袭作品、在试玩版和正式发售之间冒出的多个 Find the Needle 仿制品），但也有人怀疑 PC/主机独立游戏是否真的受影响。几个子讨论串则是在纠正或跑题：主播报道与 Steam 发售之间长达八个月的间隔放到今天会很可怕；「LocalThunk」源自一个 Lua 变量笑话，而非函数式编程里的「thunk」；还有一段冗长激烈的跑题，关于 Dan Gheesling 的美国陆军招募直播及其对他观众量的影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675486"&gt;nhinck3&lt;/a&gt;: 给出一个具体的抄袭案例：Find the Needle 的试玩版于 9 月 11 日上线，而多个仿制品在它自己 11 月发售之前就已推出，他认为这会让开发者对发布试玩版三思。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675107"&gt;duskwuff&lt;/a&gt;: 纠正了「《Balatro》不在 PC 上、或只在别处有无 DRM 版本」的假设——Steam 版本没有加密、账号绑定或登录要求。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675573"&gt;Fricken&lt;/a&gt;: 反驳运气论：在 1,000 款独立游戏中，只有一两款值得玩超过十分钟，而这类游戏往往无论如何都会脱颖而出。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50643158-zh-cn</id>
+    <title>GPT 6.2 Astra 破解一桩历史悬案</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-4"/>
+    <published>2026-11-28T07:59:56+00:00</published>
+    <updated>2026-11-28T07:59:56+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 5 名 · &lt;a href="https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical"&gt;generativehistory.substack.com&lt;/a&gt; · 423 分 · 263 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50643158"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: GPT 6.2 Astra Solves a Historical Mystery&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是威尔弗里德·劳里埃大学历史学教授 Mark Humphries 在 Substack 专栏 Generative History 上发表的一篇文章，讲述他在 OpenAI 的 GPT-6.2 Astra 正式发布前对其进行测试的经历。他给模型提供了一本藏于耶鲁大学 Beinecke 图书馆、作者不详的 1808 年素描本的图像（共 84 页，其中 34 页有铅笔、墨水或水彩画，记录了一段从蒙特利尔到威廉堡的独木舟旅程），模型在 22 分 1 秒后给出答案：作者是流亡法国的贵族、英国陆军军官 Louis-Guy-Charles-Guillaume de Rohan-Chabot，即沙博子爵（1780–1875）；模型还指出，克利夫兰州立大学藏有一份缩微胶卷版的沙博日记，它是通过历史学家 Juliette Reboul 2014 年博士论文中的一条脚注追踪到的。订购这份日记后证实了上述判断：笔迹特征吻合，行程与有日期的画作一致，而且 1808 年 6 月 18 日在圣约瑟夫堡的一则日记写道「I took a sketch」。作者补充说，Fable 5.2 在同样提示下约 35 分钟后得出了相同结论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论分为两派：一派惊叹模型竟能把一本素描本与横跨两个档案馆的一条冷门脚注联系起来；另一派持怀疑态度，认为这只是在人类构建的语料上做检索，并不能取代专业能力。多位评论者报告了类似的亲身经历：一人用 Opus 5.5 破译了此前无人能解的 1941 年德军电文，另一人用 Astra 把市售空气清新剂与一篇法国论文中提到的化学物质对应起来。但其他人反驳说，答案可能本来就潜藏在预训练数据中，而可见的「研究轨迹」是事后重构的；支持者回应称，历史学家和数学家同样完全建立在已有资料之上，靠不断移动球门来否定每一个结果的做法是不可证伪的。范围是另一条分歧线：批评者认为这属于狭窄的溯源与归属考证，而非历史解释，并且世界上大量档案材料是未数字化的纸质文件，任何模型都无法触及。另有一条支线讨论担心，同样的能力意味着大语言模型可以缩小犯罪嫌疑人范围、揭穿 Satoshi 的身份，或大幅加速法律证据开示；还有一个反复出现的玩笑是「Chabot」读起来像「Chatbot」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671205"&gt;Twiin&lt;/a&gt;: Twiin 报告称用 Opus 5.5 破译了此前无人能解的 1941 年德军电文，并称赞它对该查哪些档案和资料的直觉——这是一个平行的亲身案例。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672915"&gt;_bent&lt;/a&gt;: _bent 认为这一发现可能并非自主研究：沙博与 19 世纪初的毛皮贸易在模型训练数据中可能本就彼此邻近，因此所引用的文献或许只是对某个潜在直觉的事后合理化。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50668723"&gt;suddenlybananas&lt;/a&gt;: 作者说他很欣赏的一位评论者认为，溯源与作者归属的取证只是历史研究的前提——文献不会自我解释，而这种解释性工作并不像数学证明。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50666724-zh-cn</id>
+    <title>Paolo Soleri 在亚利桑那沙漠中建造了一座乌托邦式的生态城市</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-5"/>
+    <published>2026-11-28T07:59:55+00:00</published>
+    <updated>2026-11-28T07:59:55+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 7 名 · &lt;a href="https://www.worldofinteriors.com/story/paolo-soleri-arconsati-arizona"&gt;worldofinteriors.com&lt;/a&gt; · 36 分 · 5 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50666724"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Paolo Soleri built a utopian eco-city in the Arizona desert&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;《A World of Interiors》（2026 年 3 月号）的一篇专题报道，聚焦 Arcosanti——Paolo Soleri 在索诺兰高原沙漠中打造的 860 英亩「建筑生态」（arcology）原型。该项目始于 1970 年，规划容纳 5,000 名居民。实际上，这里居住过的人数从未超过 150 人，如今只有大约二十几人；总体规划建成部分不到 10%。Cosanti 基金会的档案管理员表示，入住申请已经停滞，因为这种生活方式「艰苦而孤立」，近乎修道。文章把 Arcosanti 呈现为一场关于密度与共居的活体实验，与当今的住房成本问题相关——美国平均房价已超过 410,000 美元——并附有编辑说明：Daniela Soleri 已对其父亲提出虐待指控。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串规模不大，多数人赞赏其建筑与照片，但最尖锐的交锋是一处纠正：一位评论者认为这里根本不是公社，而实际上是一个公司镇，居民以大幅减免的租金为项目工作，正是这种与基金会的结构化关系才让它存活下来——另一位评论者对此表示认同。一位 25 年前的访客说，它更像一个小村庄而非城市，并怀疑它无法规模化，同时推荐了 Soleri 的图文著作《Arcology: The City in the Image of Man》。最具体的贡献是关于当地地理：Arcosanti 位于 I-17 公路旁的 Cordes Junction，在 Phoenix 与 Flagstaff 之间，选址部分原因是该地块属于未建制地区、监管较少，地处 Prescott 山脉雨影区的荒芜高原沙漠，没有仙人掌。没有人针对「孤立」的论点替公社模式辩护；分歧主要在于该如何称呼这个地方，而非它是否行得通。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50667041"&gt;yepyoukno&lt;/a&gt;: 认为 Arcosanti 不是公社而是公司镇——居民以低租金为交换为项目工作——正是这种结构而非理想主义让它延续至今。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675258"&gt;taxicabjesus&lt;/a&gt;: 关于该地地理的第一手描述：位于 I-17 公路旁的 Cordes Junction，在 Phoenix 与 Flagstaff 之间中点，属未建制地区以避开监管，处在 Prescott 山脉雨影区的荒芜高原沙漠中。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675421"&gt;bjelkeman-again&lt;/a&gt;: 一位 25 年前的访客说它读起来像小村庄而非城市，极难规模化，并给出了 Soleri《Arcology》五十周年纪念版的链接。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50650253-zh-cn</id>
+    <title>悉尼红火蚁入侵</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-6"/>
+    <published>2026-11-28T07:59:54+00:00</published>
+    <updated>2026-11-28T07:59:54+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 8 名 · &lt;a href="https://www.abc.net.au/news/2026-11-25/nsw-government-ramps-up-efforts-to-respond-to-fire-ants-/107424812"&gt;abc.net.au&lt;/a&gt; · 43 分 · 21 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50650253"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Sydney Fire Ant Infestation&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;ABC News 报道称，新南威尔士州当局正在扩大对悉尼红火蚁的应对行动，此前对 Auburn 一处已处理蚁巢的监测显示，实际入侵范围更大、情况更为复杂。此次入侵最早于 9 月 23 日在内西区的 Enfield Intermodal Logistics Centre 被发现；两处地点都被怀疑源自进口集装箱货物，很可能来自中国，但据信二者并无关联。新州农业部长 Tara Moriarty 表示，正在组建一支工作组，预计周五前将出台一项覆盖土壤、草皮、覆盖物和建筑材料的生物安全令，将增派人员和探测犬，目前已收到 900 多份关于可疑蚁巢的公众报告。这些蚂蚁体长可达 6 毫米，具有攻击性，其蜇伤可导致脓疱，在极少数情况下还会导致住院或死亡；公众被告知应上报蚁巢，而不是自行销毁。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论帖中有很大一部分是玩笑——SimAnt 的梗、借《阿凡达》「火烈国」的调侃，以及一场关于这类网络梗是否该出现在 HN 上的元争论，一位评论者引用了站规，其他人则回应说 HN 一直都是「技术宅版 Reddit」。实质性的讨论围绕澳大利亚的生物安全展开：几位澳大利亚人称赞该国严格的进口管控，认为这是保护农业和本土物种的传统，并指出相比之下欧洲的边境检查显得多么松懈。最热烈的交锋围绕昆士兰州的红火蚁根除计划——一位评论者指责 20 年前诱饵计划长期资金不足，随后又用数字纠正了自己的说法（2001 年不足 1.5 亿澳元，至今已花费约 12 亿澳元，仍然失败），而另一位评论者则将失败归因于管理式的计划、预算压力以及让计划持续运转的扭曲激励，并指出 2019 年在 Airlie Beach 发现的疯狂黄蚁以及最近在 Mackay 的检出，都是同一模式的证据。一位持异议的评论者质问，昆士兰的诱饵计划与 1000 公里外悉尼的一个集装箱枢纽有什么关系，而没有人真正回答这个问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50651392"&gt;ggm&lt;/a&gt;: 这位评论者用确凿的数字纠正了自己的说法：昆士兰的计划在 2001 年起步时不足 1.5 亿澳元，但至今已花费约 12 亿澳元，仍然失败，因此最初的投入本就已经是如今总额的十分之一——应对措施本应更大胆，而不仅仅是在一开始获得更多资金。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50651330"&gt;anenefan&lt;/a&gt;: 一位具备当地知识的澳大利亚评论者描述了 1990 年代仅有两名检查员负责整个沿海地区所有航运的情况，他认为管理计划胜过根除计划，因为管理计划契合预算周期，并会形成延长计划的激励，他还将此事与最近在 Airlie Beach 和 Mackay 检出的疯狂黄蚁联系起来。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675600"&gt;motionlessveloc&lt;/a&gt;: 对讨论帖走向的直接质疑：质问昆士兰的诱饵计划与南边 1000 多公里外悉尼的一个集装箱货运枢纽有什么关系。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50662313-zh-cn</id>
+    <title>雪铁龙液压系统</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-7"/>
+    <published>2026-11-28T07:59:53+00:00</published>
+    <updated>2026-11-28T07:59:53+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 10 名 · &lt;a href="https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html"&gt;citroenet.org.uk&lt;/a&gt; · 181 分 · 57 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50662313"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Citroën Hydraulic System&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是 citroenet.org.uk 上一个长期存在的爱好者页面，介绍雪铁龙的液压气动（“oléopneumatique”）悬架：充氮气的球体充当弹簧，而由发动机驱动的泵加压至 150–180 bar 的液压油负责阻尼、自动调平和行驶高度调节。它梳理了该系统从 1954 年在 Traction Avant 上首次亮相，到 1955 年的 DS 19，再到 GS、CX、XM、Xantia（包括 Activa 的防侧倾千斤顶）和 C6 的演变历程，提到该系统曾授权给 Rolls-Royce、Mercedes-Benz 和 Berliet 卡车使用，并将六十年代中期改用矿物基 LHM 油液归功于终结了早期 DS 的密封件故障和吸湿性油液故障。文章还列出了薄弱环节——基础系统中的车身侧倾、低速时的生硬感、路噪、俯仰，以及球体在大约 60,000–100,000 公里后流失氮气——并详细介绍了由后悬架球体供压的、与载荷成比例的后轮制动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 这个帖子主要是车主们在交流各自的用车故事：jacquesm 开过一辆 2CV、三辆 DS/ID、两辆 Xantia 和一辆 XM，他描述了往一辆 DS 上装混凝土瓦，直到车尾进入无阻尼的弹跳振荡；其他人则回忆起车子启动时升起、四个行驶高度位置，以及不借助千斤顶更换车轮。在可靠性问题上，帖子里意见分成两派：一位评论者认为，每一款主动液压悬架都是维护噩梦，而且在高压下作业很危险；而长期拥有雪铁龙的车主则反驳说，球体和管路便宜、很少出故障，比追查断裂的螺旋弹簧和磨损的减震器更容易——并且认为这种布局从未普及的原因是成本和规模经济，而不是脆弱性。Xantia Activa 著名的麋鹿测试成绩得到了一位车主的辩护，他说那些失败的复现视频所用车辆的 Activa 防侧倾系统并未正常工作，不过他承认「史上最佳」的说法有些夸张，而且零件正变得越来越稀缺。支线讨论涉及 Mercedes 的后部载荷调平、Bose 被放弃的电磁悬架与 Porsche/BYD 主动系统的对比，以及电影中的亮相（Petit-Clamart 刺杀戴高乐事件、Louis de Funès、Gattaca、Highlander）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671877"&gt;Svip&lt;/a&gt;: 一位拥有 1974 年 DS 23 和 1998 年 Xantia Activa V6 的车主解释说，Xantia 之前的车型将制动和转向共用一个液压回路（一处泄漏可能让三者全部失效，按现代欧盟法规很可能不合法），并解释了为什么载荷感应式高度校正器让蘑菇形制动踏板脚感很奇怪。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672792"&gt;KennyBlanken&lt;/a&gt;: 最有力的怀疑论观点：几乎所有配备主动液压悬架的汽车都是可靠性和维护方面的噩梦，零件昂贵，所有这类系统都会随年限失效，而且高压使其在维修时很危险。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675559"&gt;yason&lt;/a&gt;: 一位拥有多辆液压式和传统式雪铁龙、车龄 25 年的车主给出的详细反驳：球体能用好几年，软管和管路一直是少见且便宜的维修项目，他更换过的制动管路远多于液压管路，而且他会在液压气动和钢弹簧之间以 10 比 1 的比例选择前者。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50631823-zh-cn</id>
+    <title>打造你自己的音箱模拟器：TONE3000 的 78 美元 DIY 效果器套件</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-8"/>
+    <published>2026-11-28T07:59:52+00:00</published>
+    <updated>2026-11-28T07:59:52+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 12 名 · &lt;a href="https://www.guitarworld.com/gear/guitar-pedals/tone3000-daisy-audio-diy-pedal-kit"&gt;guitarworld.com&lt;/a&gt; · 80 分 · 18 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50631823"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Build your own amp modeler: $78 DIY pedal kit from TONE3000&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;GuitarWorld 的一篇新闻，介绍 TONE3000（Neural Amp Modeler 音色捕获平台）推出的 DIY 效果器套件，核心是 Daisy Audio 的 Seed3 模块。总价为 77.98 美元：Seed3 售 34.99 美元（480MHz Cortex-M7，配备 192kHz/32-bit 立体声音频硬件、65MB RAM、8MB flash），再加上从 Tayda Electronics 购买 PCB、铝制外壳和其余零件的 42.99 美元。该效果器可运行来自 TONE3000 数十万条音色库中的 NAM A2 捕获，提供旋转开关上的四个预设、三段均衡、输入/输出/噪声门，并能叠加多个捕获或接入脉冲响应；从固件、配套应用到原理图、电路板和开孔模板，一切都是开源的。全部为通孔元件，约有 150 个焊点和 14 根连线，TONE3000 建议至少有过两次装机经验后再尝试。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 两位与项目关系密切的人 jfsantos 和 woodybury 直接回答了问题。最尖锐的批评集中在人体工学上：reactordev 认为外壳形状使其无法在现场演出中使用，woodybury 承认该设计是刻意做成「盒中音箱」而非多重效果器，并指出旋转开关可以被替换为瞬态脚踏开关，只需几行代码重新编程。关于难度，woodybury 估计对任何熟练焊接并能用万用表排障的人来说大约一小时即可，而 pseudosavant 反驳说 150 个焊点加上接线「绝对不止一小时」。技术问题只得到部分回答——有人指出 Raspberry Pi Pico 缺少 Seed3 的音频硬件，还有人问固件最终能否运行 A2 Full 而非 Lite，并以 ESP32-S3 的移植作为先例；关于与 Valeton GP-5 和 NUX Amp Academy 的对比则无人回应。一个分支讨论纠正了链接本身，因为 GuitarWorld 的页面有广告墙且几乎无法阅读，转而指向 TONE3000 的博客文章和装机指南。多位评论者推荐在 Pi 5 或旧 Intel NUC 上运行 PiPedal，作为能力更强且同样能集成 TONE3000 音色库的替代方案。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673625"&gt;woodybury&lt;/a&gt;: 一位项目贡献者为这种不寻常的外壳辩护，称其是刻意为之的「盒中音箱」设计，并表示旋转开关可以换成瞬态脚踏开关，几行代码就能重新编程——他自己已经这么做了。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675563"&gt;mourner&lt;/a&gt;: 询问 Seed3 固件最终能否运行 A2 Full 而非 Lite，并链接了一篇在 ESP32-S3 上原生运行 NAM A2 Full 的文章，作为这可能只是优化问题的证据。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673474"&gt;asqueella&lt;/a&gt;: 指出所链接的 GuitarWorld 页面有广告墙且信息量很低，并提供了真正的 TONE3000 博客文章和装机指南链接。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50672008-zh-cn</id>
+    <title>9/UX：一个受 Macintosh 启发的 9front 桌面</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-9"/>
+    <published>2026-11-28T07:59:51+00:00</published>
+    <updated>2026-11-28T07:59:51+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 14 名 · &lt;a href="https://progrium.github.io/9ux/"&gt;progrium.github.io&lt;/a&gt; · 117 分 · 27 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50672008"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: 9/UX: a Macintosh-inspired desktop for 9front&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Jeff Lindsay（progrium）发布了 9/UX v0.1，这是一个 Macintosh/A/UX 风格的空间桌面，面向 9front，按 Plan 9 的方式构建：一个 rio 分支（rio -u）在 /dev/ux 下添加了全局菜单栏、标题栏外观和一个拖拽代理；libux 提供窗口、菜单、对话框和控件，每个应用通过 9P 导出自己的控件树（echo activate &amp;gt; .../ctl 即可按下按钮），uxd、uxmeta、resfs 和 clipd 负责聚合、ndb 元数据、经典的 ICN#/菜单/对话框资源以及带类型的剪贴板。它不是模拟器，也不是 A/UX 的重新实现——原版 rio 程序（acme、sam、rc、嵌套 rio）仍可并行运行——它使用 1 位、16 色调色板（butter、cream、olive、greygreen），以整像素绘制，仅包含原创图形，采用 MIT 许可证，测试方式是以无头模式嵌入 h9，并注入鼠标/键盘输入来驱动这些 9P 文件。作者提醒接口将随时变更，不另行通知。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 整个讨论帖对 Plan 9/9front 获得关注总体上是热情的，评论者称赞在 9P 上构建基于 h9 的自动化 GUI 测试这一决定，并认为一个「再常规 20%」的 UI 或许能改变 Plan 9 的命运；anthk 说得最远，声称稍微调整过的 rio/libdraw 本可以一夜之间终结 Linux 和 BSD 桌面的使用，而真正用过 Plan 9（包括三键鼠标那套）的人则说，重度依赖鼠标组合键的工作流才是真正的障碍，而非外观。最尖锐的分歧在于 AI：一位评论者将该项目斥为 AI 生成的「90 年代 UI」作品，认为它违反了 9front 的禁 AI 政策，其他人则对行文群起而攻之（「每一句都带着那种 claude 腔」），有人报告 Pangram 检测结果为 100% AI 生成，并把土豆形状的单选按钮当作证据。辩护者反驳说，没人强迫你使用一个下游的业余项目，「go away」那句是对 9front FQA 的致意，而且反射式的 AI 否定本身就是个问题。支线讨论提到 Inferno 仍在发布（今年 4 月有一个版本），rio 的极简主义是需要慢慢培养的品味，有些人偏爱它胜过一切，还有经典 Mac 粉丝喜欢这个外观。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674021"&gt;andai&lt;/a&gt;: 报告了一项 Pangram 分析，给项目页面打出 100% AI 生成的评分，并指出露馅的土豆形状单选按钮。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673726"&gt;linguae&lt;/a&gt;: 亲身讲述用那个年代的三键鼠标试玩 Plan 9 的经历：底层基础极佳，但 GUI 与 Mac/Windows 差距太大，难以被采用。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674771"&gt;uproarchat&lt;/a&gt;: 解释说那句敌意的「go away」很可能是对 9front FQA 的致意，为帖子的语气提供了背景。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50672521-zh-cn</id>
+    <title>Tabernetes：一个节点就是浏览器标签页的 Kubernetes 集群</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-10"/>
+    <published>2026-11-28T07:59:50+00:00</published>
+    <updated>2026-11-28T07:59:50+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 15 名 · &lt;a href="https://tabernet.es/"&gt;tabernet.es&lt;/a&gt; · 101 分 · 33 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50672521"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Tabernetes: A Kubernetes cluster whose nodes are browser tabs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Tabernetes（tabernet.es）是一个实时演示，任何访客的浏览器标签页都可以注册为一个 Kubernetes 工作节点：页面会与 API 服务器旁的一个 agent 保持 socket 连接，由该 agent 创建一个 Node 对象，而 pod 的容器由 &amp;#x27;tabc&amp;#x27; 启动——这是一个 OCI 容器运行时，其容器运行在浏览器标签页里。每次加入会下载约 5 MB 内容，并在访客 CPU 的一个核心上启动一个编译为 WebAssembly 的 Linux 内核，而 pod 的文件和地址仍留在服务器上。控制平面是服务器上普通的 Kubernetes——只有带有一行额外标记的 pod 才会被调度到标签页上——演示把 Mandelbrot 集拆成 64 个瓦片，每个瓦片在不同标签页内的 awk 中计算。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 最主要的反应是觉得好笑又惊喜，围绕这个名字（&amp;#x27;tabarnak&amp;#x27;）冒出一堆魁北克味的双关，还有人立刻试着开几十个标签页，直到撞上上限。几位评论者追问其机制：有人找不到自己的节点，也搞不清同一台机器的两个标签页是形成一个带两个 pod 槽位的节点，还是两个独立节点（他后来承认自己只是没看见「Join the cluster」按钮）；有人质疑延迟的物理特性，其他人回答说只有工作节点是地理分布的，且负载对延迟不敏感；还有人问 GPU 访问、持久卷，以及 pod 流量是否会经由访客自己的家庭网络出去。另一些人把它放进一个趋势里看：Linux-in-WebAssembly 移植（unkernel.dev）加上一个由标签页承载的 OCI 运行时，并链接到 webnetes 和从 RISC-V 到 WASM 的 &amp;#x27;vpod&amp;#x27; 等前身，同时对这些东西能否成为生产环境或点对点项目的实用基础抱有相当合理的怀疑。一位评论者用一行 shell 命令在集群里跑起了一个聊天室，不过第一个请求会 404，因为系统还在寻找运行服务器的节点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672871"&gt;pcthrowaway&lt;/a&gt;: 一份关于该演示 UX 令人困惑的第一手报告：他分不清哪个节点是自己的，以为两个标签页会显示为一个带两个 pod 槽位的节点，后来才意识到那个大大的「Join the cluster」按钮才是真正让你加入的东西。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674760"&gt;d_philla&lt;/a&gt;: 指出 webnetes——一个更早的、前 AI 时代的项目，用笨办法做了浏览器标签页 Kubernetes——是这个想法的祖先。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674160"&gt;throwaway894345&lt;/a&gt;: 提出尖锐的反对意见：真实 Kubernetes 在延迟超过几十毫秒后就会撑不住；回复则指出只有工作节点是分布的，而演示负载对延迟不敏感。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50667371-zh-cn</id>
+    <title>Rayshader 1.0：退出矩阵</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-11"/>
+    <published>2026-11-28T07:59:49+00:00</published>
+    <updated>2026-11-28T07:59:49+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 17 名 · &lt;a href="https://www.tylermw.com/posts/rayverse/rayshader-1-0-exit-the-matrix.html"&gt;tylermw.com&lt;/a&gt; · 120 分 · 14 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50667371"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Rayshader 1.0: Exit the Matrix&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Tyler Morgan-Wall 为 rayshader 1.0 发布的文章。八年前他创建了这个 R 包，把光线追踪与制图学结合起来，用于制作三维地形图。此次最核心的变化是「物体恒存性」：场景现在会缓存高度图、范围、CRS、zscale 和垂直夸张系数，因此 render_* 函数可以直接接受带地理参照的栅格，以及 sf 的线和多边形（道路、建筑物），而不必让用户把所有东西转换成对齐的矩阵、再手工重新传入范围。他列举了新闻编辑部的采用案例——WSJ（华尔街日报）的北极航运报道、彭博 2024 年的加沙废墟报道，以及《悉尼先驱晨报》头版关于 Lismore 洪水的专题地图——作为消除这类对截稿期限不友好的摩擦的动机；1.0 可从他的 R-universe 仓库安装。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 整个讨论串以赞赏为主：评论者称渲染效果很美，并反驳 R 语言「慢」的名声，认为这类项目恰恰说明那只是使用者的水平问题。真正的分歧来自一位评论者，他问：既然可以让 Claude 一次性在 Three.js 或 Raylib 里做出同样的视觉，为什么还要用这个？其他人回应说，LLM 恰恰是拿这类作品训练的；一个自带合理默认值、能通用求解的库，胜过事后去修补生成出来的代码；而且你本来就可以把 LLM 指向某个库。作者回答说，LLM 擅长数据摄取，但在「美」的输出上很弱；rayshader 能有效地约束模型的创意自由度；他还指出 forge3d 这个已有的、vibe-coded 的 Python 仿制品，作为「要达到同等水平就意味着重建整个空间技术栈」的证据。一位评论者正在用 OpenStreetMap 加 USGS 3DEP lidar 搭建相关的 Godot 管线，他问 lidar 点云是否也能用来驱动道路高度和匝道；另外还有两个小 bug 报告（iPad 上参考书目视频无法播放；链接的网站在 iPhone 上着色器编译缓慢并丢失 GL 上下文），它们都在讨论中得到了回应并部分修复。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671878"&gt;phpp&lt;/a&gt;: 描述了他自己的管线：把 OSM 和 USGS 3DEP lidar 转成一个开放世界 Godot 游戏，从旧金山开始；他说自己也遇到了同样的立交桥/匝道/水位问题，并问 3DEP 点云能否用来设定高架高速公路的高度。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671382"&gt;augment_me&lt;/a&gt;: 有力的反方论点：他声称该领域的同行已经能通过让 Claude 输出 Three.js 或 Raylib 代码、再花几个小时修补来得到同等结果，那为什么还要用一个专用的 R 包。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672400"&gt;tylermw&lt;/a&gt;: 作者的反驳：LLM 在数据摄取上可靠，但在美感上并不可靠，而 rayshader 这类工具能减少模型的创作自由度；他给出 forge3d 作为例子——一个 vibe-coded 的 Python 版 rayshader 仿制品，其提交历史显示出达到同等水平有多难。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50644213-zh-cn</id>
+    <title>赛博朋克电视剧</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-12"/>
+    <published>2026-11-28T07:59:48+00:00</published>
+    <updated>2026-11-28T07:59:48+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 18 名 · &lt;a href="https://shellzine.net/cyberpunk-television/"&gt;shellzine.net&lt;/a&gt; · 93 分 · 84 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50644213"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Cyberpunk Television Shows&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;shellzine.net 上一份简短、定期更新的真人赛博朋克电视剧清单，按播出日期排列，每部都附有主题、剧情简介以及值得一看的理由。从 Max Headroom（1987 年，14 集）起，经 Wild Palms（1993 年）、RoboCop: The Series（1994 年，22 集）、TekWar（1994 年，18 集外加 4 部电视电影）、VR.5（1995 年）、Harsh Realm（1999 年，9 集，仅播出 3 集）、Total Recall 2070（1999 年，22 集）、Dark Angel（2000 年）、RoboCop: Prime Directives（2001 年）、Almost Human（2013 年）、Orphan Black（2013 年）、Mr Robot（2015 年）和 Westworld（2016 年），一直到 Electric Dreams（2017 年）。抓取到的文本在 Electric Dreams 之后被截断，因此后续条目不得而知。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串的大部分内容是一场关于类型边界的争论：有几个人认为 The Expanse 不该算（它是太空歌剧，没有脑机入侵），有人直言 Mr Robot 根本不是赛博朋克，而是反资本主义，另一位则为其辩护，认为凭借超级企业对抗黑客反抗、身份认同以及线上与线下生活的对比，它极具赛博朋克气质。评论者纷纷补充遗漏的作品——Dollhouse、Batman Beyond、Aeon Flux、Person of Interest、Altered Carbon、Pantheon、Psycho-Pass、Serial Experiments Lain、Cyberpunk Edgerunners——而另一些人指出这份清单明确限定为真人电视剧，还有人提到这类榜单文章靠的正是这种「为什么没有 X？」的互动。有人对 Max Headroom 以及 Captain Power and the Soldiers of the Future（包括其电视互动光枪）怀有温馨的怀旧之情，而在 Altered Carbon（第一季前半部分很强，第二季乏善可陈）以及 Blade Runner 2049 与原版电影孰优孰劣上存在分歧。大致共识是：经典的赛博朋克作品主要是电影、动画和游戏，现代真人电视剧很少能真正拿捏住那种美学。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674305"&gt;jmyeet&lt;/a&gt;: 认为赛博朋克是 1980 年代美国对日本经济主导地位的恐惧被凝固封存下来的产物，在 Snow Crash 达到顶峰，并称人们把反乌托邦和赛博朋克混为一谈了——The Expanse 和 Mr Robot 都不符合。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674929"&gt;bawolff&lt;/a&gt;: 反驳观点：Mr Robot 极具赛博朋克气质（身份认同、黑客反抗超级企业、线上生活与现实生活的差异），而日本只是一个常见桥段，并非该类型的决定性特征。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674131"&gt;anotherhue&lt;/a&gt;: 推荐 Total Recall 2070，称其实际上就是 Blade Runner 的电视剧版，尽管有 90 年代的俗气感，却是最符合 PKD／Blade Runner 氛围的荧幕作品，并附上整部剧的 YouTube 播放列表链接。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50670855-zh-cn</id>
+    <title>多州起诉 SpaceX，要求阻止 Grok 生成儿童色情图像和复仇色情内容</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-13"/>
+    <published>2026-11-28T07:59:47+00:00</published>
+    <updated>2026-11-28T07:59:47+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 19 名 · &lt;a href="https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform"&gt;oag.state.va.us&lt;/a&gt; · 368 分 · 213 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50670855"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: States sue SpaceX to stop Grok from generating child sex images, revenge porn&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;弗吉尼亚州总检察长 Jay Jones 发布的一份新闻稿，宣布在里士满巡回法院提起诉讼——俄勒冈州总检察长 Dan Rayfield 同时在摩特诺玛县提起平行诉讼——被告是 SpaceX，该公司目前运营着 X、xAI 和 Grok（「SpaceX Super Intelligence」）。诉由是依据《弗吉尼亚州消费者保护法》提出的欺骗性营销：这些公司承诺对儿童性剥削「零容忍」，并大肆宣传安全防护措施，但据称它们在设计 Grok 时就让它生成性化图像（一个被推广的「spicy mode」），并把它直接接入 X 的分享和营收机制。起诉书引用了 CCDH 的一项研究，该研究统计出 2025 年 12 月 29 日至 2026 年 1 月 8 日期间约有 300 万张性化图像被生成并发布到 X 上——大约每分钟 190 张——其中约 23,000 张似乎描绘了儿童，而一周后仍有近 30% 可被公开访问。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串分成两派：一派认为 Grok 是在当替罪羊，另一派认为这起诉讼的焦点很窄，只是关于撒谎，而非关于色情。替罪羊阵营（ls612、KoolKat23、timr）主张，每一个前沿模型都可以被越狱——一位用户描述自己要求「一个穿着透明塑料比基尼的女人」来获得裸体——并特别指出 Grok 现在的限制已经和竞争对手一样严格，所以这起诉讼只能把过去的行为框定为过失才成立。另一方（thephyber、reticulates、sickcodebruh）反驳说，Grok 是唯一一家大力营销「spicy mode」的主要实验室，Musk 本人亲自演示了一段自己的深度伪造视频，而且 xAI 是一条龙服务，生成、托管、分享并变现这些产出，这正是欺诈理论站得住脚的原因。一个很长的子讨论串在争论 X 的信息流是否会把软色情 AI 内容推给普通用户，「我从没看到过」这类回复招来的反驳是，按互动加权的算法使这种现象成为结构性的；另有一场关于第一修正案的争论——几位评论者声称起诉书实际上是在要求全面禁止生成性内容，并引用其中一段话说其他实验室直接拒绝性内容才是「更安全的设计」，而其他人则说那句话只是约 100 段事实陈述中的一段。法律方面的讨论串被大量纠正：所谓最高法院保护了 AI 生成的 CSAM 的说法是错的——所援引的权威是 2026 年第七巡回法院的一项裁决（United States v. Anderegg），且仅涉及持有；而 Ashcroft v. Free Speech Coalition 仍使淫秽的合成材料在 Miller 标准下不受保护。各阵营大致认同的事实：Grok 曾公开这样做了一段时间，X 最终添加了过滤器，而欺骗性陈述这个角度是本案中最有力的部分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671731"&gt;reticulates&lt;/a&gt;: 贴出了已提交的起诉书 PDF 链接，引用了其中关于欺骗性行为的理论，并将其概括为：如果 SpaceX 当时如实说明其安全工具有多么无效，它将被迫把该产品下线。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672893"&gt;sickcodebruh&lt;/a&gt;: 一位信任与安全从业者说，Grok 在安全圈里是生成「spicy」红队内容的首选模型，恰恰因为它的护栏只是「护栏」——其他主要厂商都拒绝，只有 Grok 乐意开启。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671385"&gt;tmp10423288442&lt;/a&gt;: 纠正了被广泛重复的说法，即最高法院保护了自行生成的 AI CSAM，并解释说 Ashcroft v. Free Speech Coalition 仍将淫秽材料交由 Miller 标准判定，而自慰类图像无法通过该标准。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50654773-zh-cn</id>
+    <title>WinHelp 文件的工作原理</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-14"/>
+    <published>2026-11-28T07:59:46+00:00</published>
+    <updated>2026-11-28T07:59:46+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 20 名 · &lt;a href="https://quin.fyi/posts/how-winhelp-files-work.html"&gt;quin.fyi&lt;/a&gt; · 30 分 · 24 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50654773"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: How WinHelp Files Work&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是由 Paperback 电子书应用作者撰写的一篇文章，介绍了 libhlp：一个用纯 Rust 编写的、用于读取 Microsoft WinHelp .hlp 文件的读取器。作者在拔智齿手术后用一个周末把它做出来，其中大量 Rust 代码由 Claude 编写。文章讲解了这一未公开格式的细节：3F 5F 03 00 魔数和 B+ 树目录，|SYSTEM/|TOPIC/|FONT/|CONTEXT 等内部文件，存放约 4 KB LZ77 压缩数据的 16 KB 文本块，两种短语替换方案（WinHelp 3.1 的 |Phrases，以及 Windows 95 时代的 Hall 压缩，使用 |PhrIndex/|PhrImage），还有以不区分大小写的哈希（乘数 43、带符号查找表、空名称哈希为 1）存储并通过 |CONTEXT 解析的链接目标。文章还介绍了颇为不同的 WinHelp 3.0 布局，并指出 Borland 和 DOS QuickHelp 的 .hlp 文件会被拒绝，因为它们属于无关的格式；libhlp 已在 crates.io 上发布，并对所有内容做边界检查。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 这个讨论串主要是在怀旧：评论者认为 WinHelp 的上下文相关帮助——点一下问号光标，再点任意控件，就地获得帮助——是软件文档的巅峰，此后没有任何东西能比得上；有人称 .CHM 是「毫无意义的倒退」，另一位则指出 CHM 本质上是用 HTML 压缩包实现的同一思路。有几个人纠正了其中暗示的微软起源说法，指出 Mac 的 System 7 Balloon Help、Sun OpenWindows 的专用帮助键，以及 QuickBasic/DOS 时代的 F1 帮助；还有人补充说 CP/M 3.0 的帮助系统是单独放在一张软盘上发行的。一个反复出现的抱怨是，现代 Windows 应用里的 F1 现在会打开 Edge 显示一个常常毫不相关的网页，而不是本地帮助。其他人则回忆起 .hlp 在 90 年代是一种通用出版格式——参考书、以 OS/2 INF 形式存在的 Redbooks，甚至还有一份《银河系漫游指南》文件——其价值恰恰在于它提供了超文本、目录、索引和搜索，而没有网页时代的臃肿；一位读者提到，用 calibre 把旧的 CHM 电子书转换成 EPUB 很痛苦。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674324"&gt;JdeBP&lt;/a&gt;: 把底层文档追溯到 Pete Davis 1993 年发表在 Dr. Dobb&amp;#x27;s Journal 上的《Undocumented Corner》系列文章，并指出 Davis 在 1997 年出版的《Windows Undocumented File Formats》一书第 4 章中对其进行了扩充和修正（配有示意图）。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674599"&gt;jjordan&lt;/a&gt;: 认为「点问号、再点控件」的上下文帮助循环是杀手级功能，而 .CHM 是毫无意义的倒退，微软此后没有任何东西能与之相比。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674118"&gt;tacostakohashi&lt;/a&gt;: 回忆起 90 年代的 WinHelp 出版场景：人们把通用参考资料以 .hlp 形式发布，因为查看器随 Windows 3.x/95 一起提供，并且无需网页时代的冗余就能提供超文本、目录、索引、搜索和图像映射。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50671275-zh-cn</id>
+    <title>Prospero：无臃肿、原生、基于 ImGui 的 AI 编码 harness</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-15"/>
+    <published>2026-11-28T07:59:45+00:00</published>
+    <updated>2026-11-28T07:59:45+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 21 名 · &lt;a href="https://github.com/skeeto/prospero"&gt;github.com&lt;/a&gt; · 59 分 · 21 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50671275"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Prospero: Bloat-free, native AI coding harness with ImGui&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Prospero 是 skeeto 开发的一款公有领域 C++ 桌面应用，可连接本地或远程 AI 提供商（OpenAI Chat Completions——llama.cpp、vLLM、LiteLLM——或 Anthropic 的 Messages API，支持扩展思考和提示缓存），并让 agent 驱动你的机器来编写软件。它是单个可执行文件，没有守护进程或服务器，Windows 二进制约 5MB，采用被动式 ImGui 渲染，因此空闲时不占用资源，也能以无头模式或通过 ssh 运行。它还具备用于开发和调试原生 GUI 应用的桌面控制功能，并声称该引擎可以在有二十五年历史的系统上运行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 整个讨论串对「小体积二进制 + 原生界面」这一角度总体持正面态度：一位评论者称这些朴素的方框比 Cursor 更耐看，并表示如果它支持 opencode 和 codex 提供商就会转用；另一位则对一个 5MB 的 Windows 二进制感到惊讶。反复出现的质疑是——既然 agent 自己就能写一个 harness，为什么还要再造一个？对此有两种回答：一是「自己动手造」的冲动是真实存在的；二是做到容易的 80% 很简单，真正费力的是 QA、判断力以及避免古怪的 bug。一个支线讨论问能否用 AI 来缩小二进制体积；回复者说原则上可以，语言和 GUI 工具包的选择才是决定因素，并援引业余操作系统 os8088 作为证据，说明 AI 编写的应用可以只有几 KB。最尖锐的反驳是技术性的：ImGui 每一帧都会重新渲染界面，所以尽管代码精简，在效率上未必胜过 TUI 或浏览器界面——但有人反驳说，真正的渲染器只在发生变化时才重绘。其他方面：Prospero 也是 PS5 的内部代号，以及一款未发行的 Valve 游戏。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675359"&gt;okasaki&lt;/a&gt;: 认为 ImGui 每一帧都会重建并重新渲染整个界面，因此无臃肿的二进制未必比 TUI 或浏览器界面更高效。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675308"&gt;dimator&lt;/a&gt;: 以一个类比反驳「人人都会自己造 harness」的预测：人人都可以自己写编辑器，但没人这么做，因为你希望有人来维护和改进这个工具。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673347"&gt;badsectoracula&lt;/a&gt;: 举出 os8088——一个面向初代 IBM PC 的类 Mac 操作系统，其 AI 生成的应用只有几 KB——作为 AI 能减小二进制体积的证据。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50673688-zh-cn</id>
+    <title>Atari Homebrew Awards 取消</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-16"/>
+    <published>2026-11-28T07:59:44+00:00</published>
+    <updated>2026-11-28T07:59:44+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 23 名 · &lt;a href="https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/"&gt;forums.atariage.com&lt;/a&gt; · 179 分 · 178 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50673688"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Atari Homebrew Awards Cancelled&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;链接的帖子是一则论坛公告（文章本身返回 HTTP 403，因此这部分内容来自标题以及评论者所引用的原文片段），其中说明 Atari Homebrew Awards 今年将不再举办。根据帖中的摘录，主办方认为三种方案都不可行：完全排除 AI、完全允许 AI，或设定一个“AI 截止线”来界定参赛资格；部分原因是 AI 的使用已在参赛者中普遍存在，且形式模糊（用于测试、审查、征求建议），部分原因是 AI 的使用无法被可靠检测。评论者还指出，主持人仍以 zeropagehomebrew 的身份在 Twitch 上直播 homebrew，并且最近主持了一场关于 AI 的社区讨论。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;未能读取原文：HTTP 403&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论明确分成两派。一方认为该奖项的存在是为了奖励手写代码的工艺与投入的证明——有几位把 AI 参赛作品比作带着叉车参加举重比赛、骑着摩托参加赛跑——并认为取消是对一条无法执行的规则的诚实回应。另一方说 AI 只是一种工具，降低门槛能让更多游戏被做出来，主办方只需增设 AI 与非 AI 两个独立类别即可；反驳意见是，分设类别并不能消除执行规则所需的人力，因为人们会在人类类别中撒谎，而检测并不可靠。Aurornis 反复做出的一处纠正值得一提：论坛帖子描述的是一个 AI 早已以不同程度普遍存在的领域，而不是一个原本无 AI 的社群被入侵。实践者从两个方向发声：一位评论者说自己用 vibe-coding 做 KIM-1 游戏，并计划亲手重写其中一个；另一位说他用三句话向 LLM 要一款 Atari 游戏，就得到了可运行的结果，这削弱了“用 LLM 做游戏仍然很难”的说法。讨论没有共识，但即便是批评取消决定的人，也大多接受主办方给出的理由——硬性的界线难以界定，更难执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674939"&gt;Aurornis&lt;/a&gt;: 仔细阅读了实际的论坛帖子，并纠正了讨论串的框架：这个社群从来就不是无 AI 的，大多数程序员已经以某种方式使用 AI，真正的困难在于在测试、调试与生成之间划出一条界线。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675560"&gt;dmitrygr&lt;/a&gt;: 做了讨论串一直在猜测的那个实验——给 LLM 三句话，就得到一款可运行的 Atari 游戏，并主张与学习汇编、CPU 时序和内存映射所需付出的努力相比，“这仍然很难”的辩护站不住脚。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50675112"&gt;bfbsoundetch&lt;/a&gt;: 从圈内补充背景：贴出主持人的 Twitch 频道链接以及最近关于 AI 的社区讨论，并主张这是一个深思熟虑的决定，而非条件反射式的卢德主义。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50669673-zh-cn</id>
+    <title>Show HN：DragDropMath——靠手感学数学</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-17"/>
+    <published>2026-11-28T07:59:43+00:00</published>
+    <updated>2026-11-28T07:59:43+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 25 名 · &lt;a href="https://dragdropmath.com/"&gt;dragdropmath.com&lt;/a&gt; · 127 分 · 37 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50669673"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Show HN: DragDropMath – Learn math by feel&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;一位物理学家开发了 DragDropMath，这是一个静态网页应用：你通过拖动符号来化简表达式、解方程，只有数学上合法的操作才被允许，因此你是「感觉」到什么是对的，而不是从错误操作中学习。它没有广告、追踪器和账号（进度存放在浏览器缓存里），教师可以把自编的题目集编码进一个链接，作者把项目的复活归功于最近那篇关于「声明式拖拽」的 HN 帖子（declarative-dragging.github.io）——这个项目最初是他在约 20 年前读博期间构想的。计划加入的功能是三角函数、复数和部分微积分；移动端支持还很粗糙。链接页面本身在没有 JavaScript 的情况下没有可读文本。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;未能读取原文：page had almost no readable text (probably needs JavaScript or a login)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 这个讨论帖整体上很热情，但最尖锐的分歧在于核心设计：rlue 认为禁止错误操作恰恰剥夺了学习者所需的反馈，就像保龄球道的护栏；Wowfunhappy 则反驳说，瞬间弹回是有价值的快速反馈，前提是学习者不是见什么点什么；作者指出有一个「Mind&amp;#x27;s eye」模式，要求先给出最终答案，以此弥补。几个人报告的是具体的可用性问题而非概念问题：Normal_gaussian 说即使你懂数学，拖拽也不直观；spolitry 抱怨内置解答会做出毫无意义的来回操作、无法配方和两边平方、界面从不显示有哪些操作可用。bug 报告得到了建设性的处理——jacobolus 无法对 (1+t)t 做分配（作者说按住 0.2 秒即可），abecedarius 无法把某一项从指数里提出来，作者承认这一步应该可以朝任一方向一步完成。一个值得一提的先行技术时刻：Declarative Dragging 的一位合著者现身，指向 Graspable Math 和他们自己的 demo，评论者指出两者相似。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50671732"&gt;rlue&lt;/a&gt;: 认为「只允许正确操作」这条规则是教学上的错误：没有失败的可能，学习者就得不到「自己的心智模型错了」的信号。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673134"&gt;joshuahhh&lt;/a&gt;: Declarative Dragging 的一位合著者向作者致谢，并给出 Graspable Math（activities.graspablemath.com）以及基于它构建的一个 demo，确立了最接近的先行技术。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672430"&gt;spolitry&lt;/a&gt;: 详细批评：内置解答会做出无用的来回操作；无法配方、无法两边平方；界面完全不提示有哪些操作可用。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50670841-zh-cn</id>
+    <title>AT&amp;T Unix PC（3B1）虚拟机</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-18"/>
+    <published>2026-11-28T07:59:42+00:00</published>
+    <updated>2026-11-28T07:59:42+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 27 名 · &lt;a href="https://virtuallyfun.com/2026/11/22/the-ultimate-att-unix-pc-3b1-vm-w-tcp-ip-and-apps/"&gt;virtuallyfun.com&lt;/a&gt; · 79 分 · 13 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50670841"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: The AT&amp;amp;T Unix PC (3B1) VM&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Tenox 在 Virtually Fun 上的一篇客座文章，介绍他对 Phil Pemberton 的 FreeBee 模拟器的分支，该模拟器用于 1985 年的 AT&amp;amp;T UNIX PC（PC 7300 / 3B1）——一台由 Convergent Technologies 制造、运行 System V Unix 的 68010 台式机。该分支增加了一块模拟的 3B1 以太网板（借自 MAME，采用 Patrick Mackinlay 的 LANCE），基于 libslirp，使 Wollongong WIN/TCP 能够通过 telnet、ftp 和 rsh 连接互联网；此外还有无需按 F10 抓取的真正无缝鼠标、带 CPU 空闲的 1x 至 32x 加速（可将空闲虚拟机从占用 Mac 一个核心约 44% 降到约 4%）、一个控制套接字和一个 MCP 服务器。他提供了一个开箱即用的 UNIX System V 3.51m 镜像，附带 Fix Disk 2.0 和 187 个软件包（Microsoft Word、Multiplan、dBASE III、WordStar 2000、GCC 2.5.8、Emacs 19、TeX、80 多个游戏），还有两个 2026 年的新程序（telnetu 终端和 Archaic WRP 网页浏览器）、一个拼凑式的 720x696 高屏分支，以及面向 macOS Apple Silicon、Linux x64/arm64 和 Windows 的二进制文件；这些补丁目前仍是提交给上游 FreeBee 的一个未合并 PR。&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50671651-zh-cn</id>
+    <title>SessionGraph：用一张可交互的图可视化你所有的编码 agent 会话</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-19"/>
+    <published>2026-11-28T07:59:41+00:00</published>
+    <updated>2026-11-28T07:59:41+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 28 名 · &lt;a href="https://sessiongraph.ai/"&gt;sessiongraph.ai&lt;/a&gt; · 48 分 · 23 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50671651"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: SessionGraph: Visualize all your coding agent sessions in one interactive graph&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;SessionGraph 是一款桌面应用，它会读取各类编码 agent 运行框架（Claude Code、Codex、OpenCode 等）的本地会话存储，将其索引进一个本地 SQLite 数据库，并把所有历史会话渲染成一张可交互的 3D 图，供你浏览和比较。它还提供跨框架搜索——以 MCP 工具的形式呈现，例如 search_sessions({ &amp;#x27;query&amp;#x27;: &amp;#x27;invoice retries&amp;#x27; })，以及一个本地 REST 端点 GET /v1/search——让你能找到一段旧对话并继续它。其卖点是一切都留在本地、保持私密；落地页着重强调可视化，以及「和你的朋友比一比」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串在「会话历史到底值不值得保留」上分成两派：一派认为真正重要的是产物（代码、文档、commit message），一次已完成的会话可以随手丢弃；作者和其他人则表示，他们经常回头去续做未完成的工作，或回想某个设计决策为何做出，而且会话占用的存储微不足道。几位尝试过的评论者反馈，它只检测到 Claude Code，完全漏掉了 OpenCode；作者随后发布了修复，到 v1.0.19 时改为直接读取 sqlite 文件，而不是与一个运行中的服务通信，报告问题的人确认这修好了。对可视化本身的主要批评是：这张图好看但不传达任何信息——人们质问这种美学价值带来了什么，或者希望它展示的是一个项目各会话之间的工作流/关联，而不是一团乱麻。评论者还提出了有用的扩展：让一个 agent 定期检视你最近 n 次会话，找出反复出现的卡点和错误假设；以及让 agent 自己查询会话历史来恢复上下文——作者表示 MCP server 和直接访问 sqlite 已经能做到这两点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674188"&gt;aeontech&lt;/a&gt;: 提出一种元工作流：让一个全新的 agent 去看你最近 n 次会话，问你在哪里卡住了、哪些假设出了问题、什么被反复重新发明、以及基础 prompt 里该改什么。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50674878"&gt;_kb&lt;/a&gt;: 认为一个持久保存的会话摘要库能保留风格与架构上的偏好，以及那些从未出现在产物里的被否决尝试——比 AGENTS.md 里的声明更有动态性——并附上了 pi-memory 的链接。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50672011"&gt;jeffreygoesto&lt;/a&gt;: 第一手反馈称 agent 已经能查询会话历史：他们让一个 agent 分析所有会话中的失败尝试，把反复出现的失败喂回自己的指令，并在 dev container 重建后通过把会话记忆挂载进容器恢复了它。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>tag:hn.due.io,2026:hn-story-50673521-zh-cn</id>
+    <title>房东的 AI 助手告诉她可以延期付租，她随后被驱逐</title>
+    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/28/0800/#story-20"/>
+    <published>2026-11-28T07:59:40+00:00</published>
+    <updated>2026-11-28T07:59:40+00:00</updated>
+    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 32 名 · &lt;a href="https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai"&gt;drmahfouz.substack.com&lt;/a&gt; · 160 分 · 119 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50673521"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Woman evicted after landlord&amp;#x27;s AI assistant told her she could delay rent&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;这是对 WRAL 一篇调查报道的 Substack 文章。北卡罗来纳州罗利市 Colony Townhome Apartments 的租户 Laura Mack 欠下 3,934.17 美元逾期租金，11 月 8 日她与一个署名「Colony Townhome Apartments」的邮箱地址往来邮件，对方似乎批准她在 11 月 30 日前付清。她于 11 月 16 日收到驱逐通知，并在 11 月 19 日被赶出住处；据报道，租赁办公室的一名员工将回复归咎于该物业的 AI 助手「Olivia」，而邮件中从未说明对方是 AI。文章将此案与北卡罗来纳州参议员 Jim Burgin 停滞的「Bot Bill」（要求披露 AI 身份）联系起来，也联系到 2024 年 Moffatt v. Air Canada 裁决——该案中法庭认定加航须为其聊天机器人就丧亲票价给出的错误建议负责。Colony 尚未确认 Olivia 是否有权批准延期。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 几乎完全一致的意见是：部署 AI 代理就意味着企业要为其言论负责——评论者把它比作秘书、分包商或老板本人，还有几人认为披露与责任是两个独立问题，应同时适用，而不是互相抵消。少数派观点（以及一位房东的第一手叙述）认为租户本应先确认该代理是否有权修改租约，随即遭到反驳：这是责怪受害者，而且租约通常允许另行签订书面协议。最实质性的反驳来自深入查阅 WRAL 后续报道和北卡罗来纳州法院记录的评论者：驱逐令早在 10 月 23 日就已获批，11 月 8 日的邮件涉及的是「无论是否占有」都欠付的租金余额，而 Mack 此前有大量欠租案件记录——因此有人认为 AI 角度是转移视线，或标题有误导性，另一些人则坚持「Olivia」缺乏防护措施才是真正的问题。一条关于「租户禁飞名单」的支线讨论走向很糟，多数人以正当程序为由反对，还有一位评论者纠正说：Air Canada 案涉及的是早于 ChatGPT 的旧式脚本聊天机器人，且只是小额索赔裁决，因此最多在加拿大以外具有说服力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673853"&gt;firesteelrain&lt;/a&gt;: 一位评论者检索了北卡罗来纳州公共记录门户，发现针对 Mack 的七起先前驱逐案件，每起都以最后一刻付款了结，另有一项因缺乏证据而被驳回的暂缓执行申请——但他同时仍主张 AI 助手需要适当的防护措施，因为他自己所在 HOA 的机器人并无批准权限。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673833"&gt;lesuorac&lt;/a&gt;: 链接了 WRAL 后续报道，其中引述 Colony 发言人 Alfred Leach：法院已于 10 月 23 日支持该公寓方，而 11 月 8 日关于未付余额的邮件「无论是否占有都欠付」，并未改变法院命令。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50673938"&gt;dghlsakjg&lt;/a&gt;: 纠正了关于 Air Canada 判例的一个常见误解——那是一个早于 ChatGPT、按常规方式编程的聊天机器人，而加航差点脱责，是因为加拿大乘客权益执法力度薄弱。&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>tag:hn.due.io,2026:hn-story-50668145-zh-cn</id>
     <title>在热门购物网站上发现利用 WebRTC 的信用卡盗刷脚本</title>
@@ -4602,246 +4842,5 @@
 &lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论分成三派。很大一部分在谈 arXiv 作为发表平台的性质是否正当、运作流程如何：好几位评论者对一本已完成的教科书也能发在 arXiv 上感到意外，回答则是专著和书稿级别的教学作品在 arXiv 上早已有之，许多读者表示他们很看重这一点。另一些人则质疑质量，认为 arXiv 实际上就是「PDF 版的 WordPress」，只有一个宽松的、靠邀请的筛选门槛，读者若不熟悉该领域和作者，就无法照单全收一篇投稿。另一条讨论线则追查那条公民抗议脚注，评论者把 Dipierro 和 Valdinoci 与 University of Western Australia 联系起来，并猜测此事与 2025 年该校一场涉及一名学生活动人士的言论自由争议有关；值得注意的是，第三位作者 Pfefferlé 同样没有列出隶属单位，但并未在抗议声明中被点名。此外，人们还互相推荐更温和的入门读物，而顶楼评论只是在争论「arXiv」该怎么读。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50548438"&gt;g-b-r&lt;/a&gt;: 挖出了撤下隶属信息的可能原因：一条 2025 年 5 月 Honisoit 文章的链接，讲的是 UWA 在一名学生活动人士面临纪律处分之际限制言论自由，外加两位作者的 UWA 个人主页——并指出 Pfefferlé 也没有列出隶属单位，却未在抗议说明中被点名。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50549588"&gt;gus_massa&lt;/a&gt;: 对 arXiv 审核机制的一句直白评价：现有用户的邀请是唯一真正的门槛，于是优秀的综述材料、琐碎的基础笔记和彻头彻尾的民科论文并排陈列，而一项较新的针对伪造参考文献的政策只能过滤掉最糟糕的那部分。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50549228"&gt;stuxnet79&lt;/a&gt;: 一条亲身推荐：Transnational College of LEX 的《Who Is Fourier? A Mathematical Adventure》对傅里叶级数的讲解是他们见过最好的——好到他们买了纸质版，而且整套 LEX 丛书都值得找来一读。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50542705-zh-cn</id>
-    <title>AI 正在杀死 All About Berlin</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-1"/>
-    <published>2026-11-18T07:59:59+00:00</published>
-    <updated>2026-11-18T07:59:59+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 1 名 · &lt;a href="https://nicolasbouliane.com/blog/death-by-ai"&gt;nicolasbouliane.com&lt;/a&gt; · 82 分 · 41 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50542705"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: AI is killing All About Berlin&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Nicolas Bouliane 从 2017 年起运营柏林搬家与官僚事务指南 All About Berlin（2020 年起全职），他写道：在连续增长七年后，该站流量已流失 70–75%，因为 Google AI Overviews 现在会先用他的内容回答问题，然后再给出链接。他指出，柏林移民局使用了他关于移民局自身的数据，政府机构也会把人们引向他的指南；他还说，自己如今每天都在为另谋收入来源做准备，而不是撰写新指南。他列举了其他地方的类似崩塌（StackOverflow 流量较峰值下降 99%），以及 Google 最近的两项公告：用 AI 回答取代搜索结果，以及在 AI 回答中投放广告。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串在同情与直言不讳之间分裂。几位评论者认为，Google 不过是在将垄断变现，而用户确实更喜欢一个综合好的答案，而不是去点开质量与时效都未知的链接；另一些人则反驳说，这些摘要常常取材于随便某个 Reddit 用户，而且经常出错，用户也很少去核实。最尖锐的反驳来自一位评论者，他指出该站的银行指南开头就是联盟营销链接，指向因反洗钱失职而受审查的银行，并认为一门完全依赖第三方的生意从来就不稳固；另一位说，LLM 会吃掉任何没有锚定受众的纯信息网站。还有人描述自己选择不再公开创作（其中一位彻底停止了发布有用的工作），提议将内容设为付费墙或加入针对 Google 的诉讼，并指出早在 AI 之前 Google 就已把自然搜索结果挤到首屏之下。一位评论者纠正了这一叙事框架：原帖及其引用的 Google 公告都出自 5 月，这个故事当时已在 HN 上讨论过。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50543051"&gt;cleansy&lt;/a&gt;: 认为该站的银行指南开头就是联盟营销链接，指向因反洗钱规则而陷入麻烦的银行，并且认为完全依赖一个你无法控制的平台从来就不是稳健的生意。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542985"&gt;ainiriand&lt;/a&gt;: 第一手经历：在疫情期间从都柏林搬到柏林时用过 All About Berlin，有搬家机构推荐过它，并建议作者直接与搬家机构合作以绕过 Google。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542943"&gt;ShadowOfThePit&lt;/a&gt;: 指出原帖及其引用的 Google 公告都出自 5 月，并链接到早先的 HN 讨论串（item 48283127），那里已经讨论过。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50538240-zh-cn</id>
-    <title>Java4Shell：OpenJDK 处理 Base64 时存在 RCE</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-2"/>
-    <published>2026-11-18T07:59:58+00:00</published>
-    <updated>2026-11-18T07:59:58+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 2 名 · &lt;a href="https://calif.io/java4shell/"&gt;calif.io&lt;/a&gt; · 839 分 · 219 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50538240"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Java4Shell: RCE in OpenJDK when processing Base64&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Calif 披露了 CVE-2026-114938：OpenJDK HotSpot 手写的 x86-64 Base64 内在函数存在堆越界写，按 CVSS 4.0 评为 9.2 CRITICAL。当 AVX-512 VBMI 代码路径处理带填充的尾部时，它算出一个负的输出长度，把存储掩码变成全 1，并从 50 字节缓冲区的偏移 48 处开始写入 64 字节；由 64 个 &amp;#x27;A&amp;#x27; 加一个 &amp;#x27;=&amp;#x27; 组成的 65 字节输入即可触发（在 OpenJDK 17 上是 128 个 &amp;#x27;A&amp;#x27; 加 &amp;#x27;=&amp;#x27;）。Calif 称 AI 大约一小时内发现了它，又用了两小时做出第一个漏洞利用，token 花费不到 200 美元，并演示了在未具名的广泛部署 Java 应用以及示例 Struts 和 Spring Boot 应用上的认证前和认证后 RCE，其中客户端 TLS 变体归功于 samczsun。文章承认不存在通用漏洞利用，每个目标都需要定制的堆 grooming 链，且攻击对网络 RTT 敏感；结尾则推销「vibe-uncoding」，即剥离未使用的功能以缩小攻击面。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论在「赶紧打补丁」的警报和「这不是 Log4Shell」的现实主义之间分裂。几位评论者依据漏洞利用自带的局限性章节论证短期大规模利用不太可能：每个目标都需要定制链，远程堆 Feng Shui 对 RTT 和抖动敏感（Calif 在同一区域租了一台虚拟机才让它跑通），而且写入基本不受控。另一些人反驳说，在许多区域租虚拟机很便宜，少数几家云厂商托管了互联网的大部分，而由 LLM 驱动的长尾未修补高价值 Java 服务——被点名的有 Keycloak 及类似现成认证服务器——才是真正的风险；一位评论者公开怀疑 LLM 究竟能否串联漏洞利用，并称 Calif 是 OpenAI 资助的机构。务实派回复占了其余大部分：Semgrep 的 ievans 贴出免费检测脚本，列出五个条件（HotSpot VM、x86-64 主机、版本范围、avx512_vbmi 加 avx512bw 且 UseAVX &amp;gt;= 3、启用 Base64 内在函数），并且反复推荐用 -XX:-UseBASE64Intrinsics 而不是 -XX:UseAVX=2，因为后者在不支持 AVX2 的主机上会出问题。评论者纠正了 Oracle 的受影响版本列表（JRE 8u511 也在内，不只是 17+），澄清 Azul Platform Core 使用上游 HotSpot 因而受影响，而闭源的 Prime 无法核实，并指出 ARM/Graviton 以及未用 -march=native 的 GraalVM Native Image 不受影响。另一场争论涉及机器的 AVX-512 支持是否会因云实时迁移而在不知不觉中改变，此外还有对文章 LLM 腔调及其「vibe-uncoding」结论的反复不满。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50538391"&gt;ievans&lt;/a&gt;: Semgrep 的 ievans 贴出免费检测脚本，明确写出暴露所需的五个确切条件，包括 OpenJ9、GCJ 和 Azul Zing 如何落在 HotSpot stub 之外，以及哪些 JVM 标志可禁用该内在函数。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539305"&gt;bikezen&lt;/a&gt;: 引用文章中 Oracle 提供的易受影响版本列表，指出 Java 8（8u511b33-perf）也受影响，与讨论中「这是 Java 17+ 问题」的假设相矛盾。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50538884"&gt;_msw_&lt;/a&gt;: 认为 -XX:UseAVX=2 是个糟糕的缓解措施，因为它在不支持 AVX2 的机器上会出问题，并建议改用 -XX:-UseBASE64Intrinsics。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50540437-zh-cn</id>
-    <title>登录 IRS 需接受 ID.me 条款</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-3"/>
-    <published>2026-11-18T07:59:57+00:00</published>
-    <updated>2026-11-18T07:59:57+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 4 名 · &lt;a href="https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in"&gt;consumerrights.wiki&lt;/a&gt; · 322 分 · 144 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50540437"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: ID.me terms required for IRS sign-in&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Consumer Rights Wiki 的一则条目，记录了纳税人在通过 ID.me 登录 IRS 在线服务时所同意的内容：一条共同仲裁条款、必须致信退出否则视为放弃的陪审团审判权和集体诉讼权（须在 30 天内以电子邮件方式选择退出）、1000 美元的赔偿责任上限、一份允许将数据用于营销以及在发生公司交易时转移数据的隐私政策，以及在钱包关闭后最多保留核验数据三年。条目还指出了替代方案——Login.gov，以及标注「无需登录」的 IRS Direct Pay——并指出 ID.me 于 2026 年 10 月 28 日取代了原有的 TreasuryDirect 登录方式，促使参议员 Ron Wyden 和 Elizabeth Warren 于 10 月 29 日致信财政部和 IRS，质问他们为何使用 ID.me「而不是政府运营的 Login.gov 平台」。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 最主要的抱怨是：如今一个私营供应商横亘在公民与自己的税务账户和储蓄债券账户之间，有几位表示自己宁可承担罚息卖掉了 I 债券，有人在等着这次变更过去，也有人出于原则拒绝使用 ID.me。最有力的反驳来自一位在 IRS 身份团队面试流程中了解内情的评论者：当时 Login.gov 无法满足 NIST SP 800-63-3 的 IAL2 要求，而且 GSA 监察长报告认定 GSA 就合规问题误导了各机构，同时还收取了超过 1000 万美元的费用——其他人则驳斥这一说法只是遮羞布，因为纸质申报根本不需要任何身份证明就能提交。实际体验的反馈好坏参半：有人描述了在没有智能手机的情况下改用视频通话的变通办法；有人因为身份证上的门牌号与水电账单相差一位数字而导致核验失败；有人说 Login.gov 拒绝 VoIP 和预付费号码；也有人表示 Login.gov 在邮局办理的线下核验很方便。评论者还纠正了债券被冻结这一前提——TreasuryDirect 表示受限的只是在线访问——并指出 IRS 现在已接受 Login.gov，不过有人说这项支持是最近才开始的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541210"&gt;apitman&lt;/a&gt;: 一位上周在没有普通智能手机的情况下完成 ID.me 注册的用户解释说，在 Google Voice 号码被拒后，他通过视频通话完成了流程，而 Login.gov 完全没有提供任何替代方案——这直接驳斥了最高赞评论所称注册不可能完成的说法。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542491"&gt;chimeracoder&lt;/a&gt;: 引用 TreasuryDirect 自己的原话，纠正被广泛重复的说法：没有 ID.me 时受限的只是在线访问，账户、资金和投资仍然完好无损。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541967"&gt;toomuchtodo&lt;/a&gt;: 一位约在 2015 年面试过 IRS 身份团队的人认为，选择这家承包商的原因是 Login.gov 拒绝使用人脸识别，从而无法符合 IAL2 要求，并附上了 GSA 监察长报告的链接。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50538994-zh-cn</id>
-    <title>Quad9 退出法国：煤矿中的金丝雀</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-4"/>
-    <published>2026-11-18T07:59:56+00:00</published>
-    <updated>2026-11-18T07:59:56+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 5 名 · &lt;a href="https://blog.cloudflare.com/quad9-withdrawal-from-france/"&gt;blog.cloudflare.com&lt;/a&gt; · 514 分 · 160 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50538994"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Quad9&amp;#x27;s withdrawal from France: A canary in the coal mine&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Cloudflare 的一篇博客文章，讲述瑞士非营利组织 Quad9 在法国法院因其拒绝屏蔽与涉嫌版权侵权相关的域名而对其处以每日罚款后，将其免费公共 DNS 解析器（9.9.9.9）撤出法国——这场诉讼主要由 beIN Sports 推动。Cloudflare 认为，DNS 屏蔽既无效（用户一分钟内就能换一个解析器，或直接使用裸 IP），又粗暴（它屏蔽的是整个域名，而非具体文件），还不透明（网站只是加载失败），而当它被强加于全球解析器时更加危险，因为一个国家的命令会跨境外溢。文章指出，Cisco 此前已将 OpenDNS 撤出法国、葡萄牙和比利时，并称 Cloudflare、Google 和 Cisco 正在对一项比利时命令提起上诉，该命令规定，若它们不在 2027 年 1 月初之前开始屏蔽，就会对其处以罚款。Cloudflare 警告说，法国用户——包括医院、大学和政府机构——可能会发现自己的网络直接停止工作，因为 Quad9 无法识别或通知他们。&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50540178-zh-cn</id>
-    <title>Google 的 AI 回答使搜索流量减少 40%</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-5"/>
-    <published>2026-11-18T07:59:55+00:00</published>
-    <updated>2026-11-18T07:59:55+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 6 名 · &lt;a href="https://revscope.co/blog/search-seo-geo-2026/"&gt;revscope.co&lt;/a&gt; · 317 分 · 249 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50540178"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Google&amp;#x27;s AI answers reducing search traffic by 40%&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;这是一篇 RevScope 博客文章（作者是 HN 提交者 slashdev），将 DataForSEO 的面板数据与一项随机对照试验结合起来，论证 Google 的 AI Overviews 如今出现在所追踪美国关键词的 61.43% 上（2024 年 9 月为 5.93%），并使跳转到外部网站的点击减少约 40%。最有力的证据是 Saharsh Agarwal 和 Ananya Sen 的一篇工作论文：该论文在 2026 年 1 月至 2 月对随机抽取的一部分美国桌面端 Chrome 用户隐藏了 Overviews，结果显示，在本会展示 Overview 的查询上，每次搜索的外链点击为 0.37 次，而对照组为 0.62 次；以完全没有外链点击结束的搜索从 54% 升至 73%；广告点击数不变；而在全部搜索上则损失约 18.5%。文章还报告称，桌面端第一条结果的点击率同比从 17.83% 降至 7.43%（报告本身未将这一下降归因于任何具体原因），并发现除了常规 SEO 加上第三方平台的存在和被引用的页面之外，几乎没有证据支持「GEO」这类操法的有效性；文章还指出，AI 助手在 3 月只给网站带去 0.3% 的流量，而 Google 则否认整体流量在下滑。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论清晰地分成两派。一派公开表示乐见其成：搜索早已被 SEO 的标题党和内容农场淹没，而对「今晚 SNL 有谁」这样的问题直接给出答案才是更好的产品——几位前 SEO 从业者说早就该这样，并认为 Google 在 OpenAI 之前主动颠覆自己是理性的。另一派则称之为盗窃和流量兼并：Google 抓取了内容、建好了索引，如今正在攫取价值，而生产这些素材的网站却在死去；多位发布者报告称损失远不止 40%，其中一位站长说自己跌了 80% 以上，并打算把网站转入维护模式。几位评论者反驳这种怀旧情绪，纠正了前提——Google 当年对那个 SNL 查询也从来都不擅长，而 Huffington Post 时代就已经上演过 SEO 之战——另一些人则指出，Pew 与该文援引的研究在还剩多少点击量上说法不一，而 Google 所称的「高质量点击」发布者根本无法核实。Kagi 和 DuckDuckGo 被反复推荐，同时也有不少人对付费搜索能达到临界规模表示怀疑；另有一条分支讨论担心，广告、GEO/AEO 的操纵以及模型投毒会在 AI 回答中重演旧的 SEO 动态。作者本人在场参与，承认关键词样本偏向商业性，因为它是从 Google Ads Keyword Planner 数据中生长出来的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542429"&gt;nicbou&lt;/a&gt;: 对 40% 这一数字的亲身反证：allaboutberlin.com 的运营者说自己的流量跌了 80% 以上，这些信息既容易被盗用又制作成本高昂，他预计会把网站转入维护模式并另找工作。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540575"&gt;slashdev&lt;/a&gt;: 文章作者解释了 DataForSEO 关键词列表是如何构建的，并承认它偏向具有商业价值的查询，这一点关系到这些百分比能在多大范围内推而广之。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540661"&gt;jeffbee&lt;/a&gt;: 对整个框架的一个直截了当的反驳：Google 网页搜索的目标从来都是把答案放到用户眼前，而从来不是给网站引流——广告和搜索是两个独立的产品领域，而大多数人拒绝相信这一点。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50542135-zh-cn</id>
-    <title>面试了一家 YC 创业公司，发现他们未经许可使用了我的 LinkedIn</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-6"/>
-    <published>2026-11-18T07:59:54+00:00</published>
-    <updated>2026-11-18T07:59:54+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 7 名 · &lt;a href="https://reddit.com/r/recruitinghell/comments/1xyr6ml/interviewed_at_a_yc_startup_spent_30_hours/"&gt;reddit.com&lt;/a&gt; · 287 分 · 51 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50542135"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Interviewed at a YC startup, found out they used my LinkedIn without permission&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;这是一篇 Reddit r/recruitinghell 的帖子（页面本身不登录无法阅读，因此以下内容依据标题和帖文中的引用片段）——发帖者在 Standout（standout.work）花了大约 30 小时完成为期 3 天的无薪「试用」，这是一家 YC P26 创业公司，其核心业务是基于 LinkedIn 的背书。作为试用的明确前提条件之一，发帖者把自己的个人 LinkedIn 账号接入了该公司的平台，而在三周毫无音讯之后，发现自己的账号被用来发送好友请求和消息，而他本人并不知情。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;未能读取原文：page had almost no readable text (probably needs JavaScript or a login)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 整个讨论几乎一边倒地敌视这家公司：有几个人说这是律师和警察该管的事，而不该只是发个论坛帖；也有人指出 YC 拥有 HN，因此期待 YC 介入调查、甚至把该公司踢出 YC 是合理的。一位翻看过 Reddit 原文的评论者澄清了争议细节——发帖者是把 LinkedIn 与平台做了关联（类似 OAuth 的授权连接），而不是交出了写下来的密码——同时也有少数人怀疑这只是个尴尬的失误，并举例说在 lemlist 这类销售工具里不小心用错账号发消息的情况。一个反复出现的分支争论针对 YC 的增长文化，引用 Paul Graham 提出的「每周 5-7%」增长基准，认为这种压力会逼创始人越过道德底线；评论者还集中抨击「3 天、每天 10 小时」的无薪试用本身就是危险信号，不过有一个人说，相比六周内跑六轮面试，他宁愿接受这种试用。另有一大段偏题讨论涉及给 Apple Store 员工登录密码以便维修的相关做法，人们建议清空机器或另建一个一次性管理员账号。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50543045"&gt;dieselgate&lt;/a&gt;: 引用了 Reddit 帖文中的关键一句——LinkedIn 是作为前提条件被接入公司平台的——纠正了「发帖者只是把密码写下来」的印象。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542784"&gt;gabaix&lt;/a&gt;: 认为这符合 YC 不惜一切代价求增长的文化，并引用 Graham 的「每周 5-7%」基准，认为这种压力会促使创始人放弃道德。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542717"&gt;edwcross&lt;/a&gt;: 公开呼吁 Standout（YC P26）CEO 出面解释，同时指出过长且无薪的试用，以及三周后未经授权使用 LinkedIn 的问题。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50539610-zh-cn</id>
-    <title>Microsoft 的 ONNX Runtime 已从 GitHub 上消失</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-7"/>
-    <published>2026-11-18T07:59:53+00:00</published>
-    <updated>2026-11-18T07:59:53+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 9 名 · &lt;a href="https://github.com/microsoft/onnxruntime"&gt;github.com&lt;/a&gt; · 283 分 · 64 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50539610"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Microsoft&amp;#x27;s ONNX Runtime has disappeared from GitHub&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;链接指向的是 microsoft/onnxruntime 这个 GitHub 仓库，它现在返回 404，因此文章本身无法阅读。评论者描述说，这是一个约有 22k 星标的仓库，在没有任何公告或预警的情况下突然下线，而 onnxruntime.ai 以及 PyPI/Maven Central 上的软件包据称仍在。一条并行的讨论串指出 microsoft/agent-framework 也已下线，且其 PyPI 软件包最近被植入了窃取凭据的恶意代码，有人怀疑两件事有关联。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;未能读取原文：HTTP 404&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 主流推测是 Microsoft 的 GitHub 组织里有管理员账号或仓库被入侵；另一些人则认为 Microsoft 在得知安全问题后撤下了该仓库，却根本没有留下任何说明性通知——有人批评这是「业余水准」，因为太多生产流水线依赖它。多人证实被移除的不止一个仓库，还列出了 onnxruntime-genai、onnxruntime-extensions、onnxruntime-swift-package-manager 等同类仓库同样不见踪影，不过规范仓库 onnx/onnx 未受影响，还有一位评论者不得不纠正那些把规范与运行时混为一谈的人。一个子讨论串反驳了顶层的一条说法——ONNX 会在无法选择退出的情况下外泄应用数据；维护者和用户指出可以用 onnxruntime.disable_telemetry_events() 以及环境变量 ORT_DISABLE_TELEMETRY=1，原评论者后来为误读了意图而道歉。实用建议分成两类：把依赖 vendoring/锁定版本，以及使用 Artifactory、Nexus 之类的内部仓库代理；其他人则提到 Intel 的 OpenVINO 分支、一个 syntax-syndicate 分支、一个 SourceForge 镜像（并警告来源不明的归档文件可能有恶意），以及 Tract、RTen 和 burn-onnx 等 Rust 替代方案。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539658"&gt;nvader&lt;/a&gt;: 发帖人说自己当天早上流水线里的 eval 开始失败才发现此事，事先毫无预警，并质问一个 22k 星标的仓库怎么能就这样下线。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540670"&gt;tekacs&lt;/a&gt;: 列出了同样消失的更多 Microsoft ONNX 仓库——onnxruntime-genai、-extensions、两个示例仓库、Swift package manager 仓库和 web benchmark——并指出 extensions 在前一天还有一次推送。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541794"&gt;mscdex&lt;/a&gt;: 纠正了「无法选择退出」的说法，指出在加载该库前设置 ORT_DISABLE_TELEMETRY=1 即可关闭遥测，无需重新编译。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50541790-zh-cn</id>
-    <title>为什么 Gemini 4 Carbon 要花这么久？</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-8"/>
-    <published>2026-11-18T07:59:52+00:00</published>
-    <updated>2026-11-18T07:59:52+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 11 名 · &lt;a href="https://kernel.dev/blog/why-is-gemini-4-carbon-taking-so-long/"&gt;kernel.dev&lt;/a&gt; · 59 分 · 31 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50541790"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Why is Gemini 4 Carbon taking so long?&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;kernel.dev 的一篇基准测试帖在私有修 bug 评测集上运行了 Gemini 4 Carbon，发现对于 Opus 和 Astra 几分钟就能完成的任务，它要花接近一个小时。追溯这些运行过程后，作者认为在与 Astra 的差距中，只有 16–30%（与 Opus 相比是 45–49%）可归因于推理更慢；其余都来自轨迹长度——大约是 Astra 的 7 倍步数、11 倍工具操作、7 倍输出 token 和 16 倍以上的已处理输入。Carbon 有一半的步骤花在了工单从未要求的活儿上（审查不相关的代码、针对已被排除的情况做加固），而每五轮注入一次「你手上的信息是否已经足够做出修复？」的检查，把一次试验从 37 分钟缩短到 28 分钟；机械性问题（大约每一步一次工具调用，而 Astra 是两次以上；重复读取的行占 39%，而 Astra 为 7%）估计约占超额运行时间的四分之一。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 几乎所有人都同意 Carbon 在实际使用中慢得令人痛苦，但讨论串在原因上出现分歧。最高票评论认为 Google 根本没有动力去优化服务——推理收入与广告相比只是零头，DeepMind 有补贴，而算力少 10–100 倍的中国实验室必须推出高效的模型——回复则认为这种说法过度理论化，更可能的解释是数据、算法和训练环境更差（还有人归咎于 TPU）。若干实践者表示这种慢是有回报的：比 Claude 系列那种「推土机」感觉更轻的手法和更好的架构判断力，日常编码更偏好 Argon，而把 Carbon 留给架构和深度根因分析工作。另一些人报告说 Argon 同样「就是一直做下去」，而且 Google 自己的文档把 Carbon 描述为一个只是思考得久得多的版本。有人对 Theo 那段把问题归咎于首 token 时间的视频持怀疑态度，随即有人回以 CursorBench 的链接，据称 Carbon 在真实世界编码任务上排名第一；一个分支讨论则抱怨现在每家实验室都在为编码基准优化，牺牲了其他一切。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542293"&gt;tristanj&lt;/a&gt;: 认为这种慢是结构性的：Google 的收入来自广告而非推理，所以与 Anthropic 和 OpenAI 不同，它没有动力让服务在 token 上更高效。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542250"&gt;horacemorace&lt;/a&gt;: 第一手报告称 Carbon 非常慢，但能用轻巧的手法和合理的架构解决问题，与 Claude 的「推土机」式做法形成令人耳目一新的对比。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542589"&gt;teknologist&lt;/a&gt;: 用 Cursor 评测的链接反驳 Theo 的视频，在那些评测中 Gemini 4 Carbon 在真实世界编码任务上名列前茅。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50539747-zh-cn</id>
-    <title>Archive Team 正在归档 Apple 支持社区（2026 年 11 月 20 日关闭）</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-9"/>
-    <published>2026-11-18T07:59:51+00:00</published>
-    <updated>2026-11-18T07:59:51+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 12 名 · &lt;a href="https://wiki.archiveteam.org/index.php/Apple_Discussions"&gt;wiki.archiveteam.org&lt;/a&gt; · 173 分 · 57 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50539747"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Archive Team is archiving the Apple Support Community (closes November 20, 2026)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;这是 Archive Team wiki 上的一个存根项目页面，用于针对 Apple 支持社区（Apple Support Community）的志愿者抓取。Apple 于 2026-11-10 通知用户，该社区将在 2026-11-20 关闭，只给了大约十天的通知期；目前该网站已处于只读状态。抓取范围涵盖众多地区版本——discussions.apple.com，以及 communities.apple.com 的 fr/de/es/pt 版本和中国、日本、韩国的讨论站点——抓取任务会向实时跟踪器提供数据。页面上有一条捐赠横幅，并呼吁志愿者加入 ArchiveTeam Warrior，该项目由 IRC 频道进行协调。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 整个讨论串对论坛本身的敌意远大于对归档工作的敌意：几乎所有顶层评论都说 Apple Discussions 的页面在搜索结果里毫无用处，被少数几位高产用户把持，他们发布长篇复制粘贴的答案，结尾无非是「重置 PRAM 和 SMC」、「重新格式化并重装 macOS」或者「直接更新就好」——还有几个人把它与 Microsoft 和 Google 的支持社区做不利的对比，后两者至少有时能给出真正的解决方案。一个规模较小的反驳意见认为，保存并不取决于答案好不好：归档者保留整堆干草，是因为他们无法预知未来的历史学者会需要什么；一位评论者提到 Jason Snell 和 John Gruber 都在为该社区的关闭而叫好，但同时又反驳说，只要把上下文交代清楚，未经筛选的糟糕答案仍然值得保存。帖子中还夹杂着一些纠正和实用说明：Archive Team 不是 Internet Archive；Internet Archive 的页面本来就几乎无法通过搜索引擎找到；志愿者分享的进度数字从剩余 268 万项一路变动到约 700 万项，因为队列不断发现更多待处理的工作。有几个人在得知操作方法后启动了 Warrior 容器，还有一位 Apple Silicon 用户记录了一个 Go/colima 的 bug，需要在 docker run 中加入 GODEBUG 标志，applediscussions 项目才能运行。讨论大体上形成了共识——即便是同情归档工作的人也是如此——Apple 本应自己保存其社区二十多年的帖子，而不是把它留给无偿的志愿者。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541148"&gt;amar1729&lt;/a&gt;: 亲身踩坑：由于一个 Go 运行时 bug（golang/go#77572），Warrior 容器在 colima 下的 M1 Mac mini 上无法运行；在 docker run 中加入 -e GODEBUG=madvdontneed=0 后，applediscussions 项目在其他 Apple 机器上也能正常运行。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540433"&gt;CharlesW&lt;/a&gt;: 认为如果这些页面继续被搜索引擎和 LLM 索引，归档就是净负面效果；引用了 Jason Snell 关于「为赚取声望而答题的人」的说法和 John Gruber 的「Good riddance」，并在后续回复中承认保留上下文是有价值的。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541403"&gt;maxbond&lt;/a&gt;: 直截了当地陈述了归档者的立场：即便是无用的答案，对未来的历史学者来说也是有价值的元数据；保存工作试图保留整堆干草，因为你无法预测将来会需要什么。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50532849-zh-cn</id>
-    <title>美国高度机密的国安全通信网络宕机</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-10"/>
-    <published>2026-11-18T07:59:50+00:00</published>
-    <updated>2026-11-18T07:59:50+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 13 名 · &lt;a href="https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down"&gt;cnn.com&lt;/a&gt; · 560 分 · 650 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50532849"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Highly classified US national security communications network goes down&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;CNN 报道，NSANet——NSA 用于内部传输机密信息的网络——在周二宕机，Fort Meade 园区从「黄色代码」升级到短暂的「绿色代码」，随后又升到「橙色代码」，除关键人员外禁止一切人员进入。NSA 称这是「在计划内例行维护期间出现的临时性性能下降」，关键任务能力保持完好；而国家情报总监 Jay Clayton 在 Fox Business 上表示，为上月发现的 PHP 漏洞（研究人员借助 AI 予以利用）打补丁后，一些系统「没有按预期恢复运行」。消息人士称，没有证据表明发生了网络攻击，五眼联盟的情报共享未受影响；一位前 NSA 高级官员将 NSANet 形容为「一个由网络组成的网络」，称此事令人警觉，但「大概不至于造成瘫痪」；这则消息传出之际，正值 FAA 全国范围停飞（追查到一个位于阿肯色的路由器）、Microsoft Outlook/Teams 故障以及 Chase 网上银行投诉。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串明显分裂为两派：「模式匹配派」和「辟谣派」。一派列举本周的一连串故障——Outlook、FAA 停飞、银行、Optimizely 恶意软件、Apple 服务、NSANet——并将其解读为敌方行动、AI 驱动的攻击，或是 DOGE 时代联邦 IT 削减的后果；另一派则认为这是频率错觉，指出 Microsoft 和 Azure 多年来都有持续数日的宕机，而所谓「银行宕机」很大程度上只是 DownDetector 上的一次尖峰，一些银行已予以否认。几位自称有政府或国防网络经验的评论者认为，真正的问题在于这类环境只做一次认证、之后再不重新认证，于是各机构只能一直沿用古老的固件——其中一人描述说，某供应商在 eBay 上淘旧的 Juniper VPN 设备，因为只有那个版本通过了认证，而那个版本连同后门一起被认证了。一个反复出现的子话题是：一个机密网络的运行状态为何会公开？给出的回答是，运行状态很少达到「损害国家安全」这一保密门槛，而且一旦六位「知情人士」已经告诉了 CNN，官员们不如干脆确认。怀疑者还质疑消息来源——「六位知情人士」、CNN 归 Skydance/Ellison 所有——除了都同意这一周看起来很糟之外，几乎没有什么共识。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50537903"&gt;jiggawatts&lt;/a&gt;: 关于搭建「极高安全性」政府网络的第一手叙述：整个流程由一次性认证驱动，而非由安全需求驱动，因此某供应商在 eBay 上采购旧的 Juniper VPN 设备，因为只有那个固件版本通过了认证——而同一版本里就含有 Dual_EC_DRBG。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50534227"&gt;no-dr-onboard&lt;/a&gt;: 补充了架构背景：NSANet 承载从机密级到 TS//SCI 的信息，运行在与公共互联网分离的独立骨干网上，并且刻意难以与未分类网络对接——所以「我们被攻陷了」的解读为时过早。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50536804"&gt;krauses&lt;/a&gt;: 对宕机「模式」的详细反驳：梳理了可追溯到 2018 年的 Microsoft/Azure/Teams/Exchange 故障，认为当前这一周之所以显得独特，只是由于关注度和媒体报道——「correlation != ____」。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50537156-zh-cn</id>
-    <title>jQuery 4.1.0</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-11"/>
-    <published>2026-11-18T07:59:49+00:00</published>
-    <updated>2026-11-18T07:59:49+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 16 名 · &lt;a href="https://github.com/jquery/jquery/releases/tag/4.1.0"&gt;github.com&lt;/a&gt; · 312 分 · 161 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50537156"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;jQuery 4.1.0 的 GitHub 发布说明，与 jQuery 3.8.0 一同发布（链接的 jQuery 博客文章把后者描述为谢幕而非回归）。更新日志显示的是维护级别的工作以及一些实质修复：jqXHR 上的 responseURL 字段、传输层可选的 completeCallback API、弃用 getElementsByTagName/getElementsByClassName 转而使用 querySelectorAll、为 XML 文档使用 createElementNS、支持与表单关联的自定义元素、修复标识符匹配中的 ReDoS 问题、将无效转义码点解码为 U+FFFD、针对 Safari 27 正则解释器 bug 的变通方案，以及新的商业支持供应商 TuxCare。还新增了针对机器生成贡献的准则。博客公告链接虽已包含，但正文无法获取，因此发布的定位来自发布说明和评论者。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 这个帖子主要是怀旧，以及一场关于相关性的实时争论：几个人指出 jQuery 仍运行在约 60%+ 的网站上（引用的数字从 53% 到 64% 不等，w3techs 约为 63%），另一些人则指出其中很大一部分是 WordPress 默认附带、主题/插件依赖它。支持者说，对于需要下拉菜单和幻灯片展示的静态站点、遗留代码库以及用户脚本，它仍是最合理的选择；怀疑者则认为现代原生 JS 加少量 polyfill 已能覆盖一切，而 gzip 后 27 kB 纯属额外开销；少数人指出，现在 LLM 让把旧 jQuery 移植到原生代码变得很便宜。最有实质内容的技术讨论串是关于原生 JS 仍然缺少什么：querySelectorAll 返回一个功能贫乏的 NodeList，它在 2016 年才获得 forEach，而 jQuery 集合允许你对整个匹配集合一次性调用方法。一个关于方法链的子讨论串认为，jQuery 真正的创新在于把几乎每个方法都标准化为返回同一种容器类型（DefinitelyTyped 的 jQuery 类型声明中有大约 201 个 `: this` 返回），而一位长期用户则认为相反的约定是错的——空选择集应当抛错，而不是静默地什么都不做。评论者还指出，jQuery 3.8.0 仍支持 IE 9-10、旧版 Edge、iOS 7+ 和 Android 4.0+，并且 DataTables 3 终于在 2026 年 7 月去掉了对 jQuery 的依赖。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541590"&gt;noduerme&lt;/a&gt;: 一位开发者解释了ta仍在用 jQuery 的一个被低估的特性：它的事件模型可以作用于普通数据对象，而不只是 DOM 节点，因此核心逻辑可以监听一个派发自定义事件的模型，而不必绑定到每个复制出来的元素上。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50538767"&gt;troupo&lt;/a&gt;: 对「$ 和 $$ 就够了」这一论点的具体纠正：NodeList 只暴露 item、entries、forEach、keys 和 values，而 forEach 直到 2016 年才出现，比 querySelectorAll 晚了多年。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50537539"&gt;hinkley&lt;/a&gt;: 一位实践者认为，jQuery「空选择集即空操作」的约定对于交互式应用是反的——在交互式应用中，选择器失败通常是一个 bug——ta希望对空集调用 .hide() 会抛错，除非显式标记允许。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50536813-zh-cn</id>
-    <title>350 年前，Ole Rømer 发现光速是有限的</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-12"/>
-    <published>2026-11-18T07:59:48+00:00</published>
-    <updated>2026-11-18T07:59:48+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 17 名 · &lt;a href="https://www.sciencenorway.no/culture-history-history-of-science/350-years-ago-this-man-discovered-that-light-has-a-finite-speed/2737969"&gt;sciencenorway.no&lt;/a&gt; · 318 分 · 93 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50536813"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: 350 years ago, Ole Rømer discovered that light has a finite speed&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;ScienceNorway 的一篇特稿，讲述 Ole Rømer 在 1676 年的测量：他利用木星卫星 Io 滑入木星阴影的时间，证明光需要时间传播。文章本身无法加载阅读（页面几乎没有可读文本），因此以下细节来自标题和评论线程：该效应大致表现为一年内食定时累计延迟约 22 分钟；这一结果发表在 Journal des sçavans 上，称约在 11 月 9 日前后，Io 从木星阴影中显现的时间比预测晚了约十分钟。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;未能读取原文：page had almost no readable text (probably needs JavaScript or a login)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 线程的大部分讨论围绕通常的通俗讲法是否诚实展开。几位评论者认为，标准表述暗示 Io 的轨道周期本身发生了变化，这是错误的——轨道并没有改变，但观测到的（视）周期会偏移几秒，而随着地球到木星的距离变化，这些差异会累积，最终造成食定时 22 分钟的摆动。漫画作者反驳说，这种简化是刻意为之，面向的是零物理背景的读者；其他人则指出，真正的微妙之处在于把相位振荡拟合到一长串预测凌日表上，而不是做单次两点测量。第二组质疑关乎 17 世纪的钟表：回复指出，Huygens 的摆钟当时刚出现不久，精度约为每天一分钟，只需在每晚对照恒星凌日重新校准之间保持走时；而计数天数加上恒星时，就提供了长基线。线程随后转向一场关于单向光速的漫长争论，其中一位评论者提出的双钟实验被反驳，理由是钟的同步本身已经预设了答案；此外还有关于科学史书籍推荐、北极脑筋急转弯以及对网站弹窗广告的抱怨等枝节话题。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539140"&gt;kingstnap&lt;/a&gt;: 认为通俗解释是错的——周期不会随距离改变——真正的结果是一个累积的相位偏移，被当作正弦波拟合到 Cassini 式预测凌日表上；并将其与 Millikan、Cavendish 和 Foucault 同样被误教成单次神奇测量的情况相类比。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50537809"&gt;adrian_b&lt;/a&gt;: 历史细节：Huygens 的摆钟当时才问世几十年，对 Rømer 的精度至关重要；不过原则上，用子午环观测恒星凌日得到的恒星时可以替代钟表，只是难度大得多。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50538704"&gt;Maxatar&lt;/a&gt;: 解释了为什么测量单向光速的显然解法——同步两只钟，然后慢慢移动其中一只——行不通：因为两者的分离本身会引入时间膨胀，而只有事先知道单向光速才能修正它。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50535992-zh-cn</id>
-    <title>Phrack 73 发布</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-13"/>
-    <published>2026-11-18T07:59:47+00:00</published>
-    <updated>2026-11-18T07:59:47+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 18 名 · &lt;a href="https://phrack.org/issues/73/introduction_md"&gt;phrack.org&lt;/a&gt; · 364 分 · 52 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50535992"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Phrack 73 Released&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Phrack #73 于 2026-11-17 发布，是新团队策划的第三期，篇幅比去年更大：23 篇正刊文章加上 8 篇 Line Noise 短文。内容涵盖：通过 vDSO 实现的 Docker 逃逸（andersonc0d3）、借 Skia 突破 Chromium 渲染器沙箱、QNX 用户态 shellcode、UAF 漏洞利用、一个 Binary Ninja 静态污点分析插件、LLM 时代的 Linux 内核漏洞开发、两个源自 PhrackCTF 的 WinFsp 0-day、一篇 Halvar Flake 的 Prophile 访谈，以及四篇「Phrack 世界史」文章，分别讲述 2000 年 SSH1 CRC32 漏洞利用、blue boxing、2003 年 Linux 内核后门自白，以及早期的雇佣僵尸网络。导言把四十周年的纸质版重启（Defcon 33、HOPE、WHY25 等场合）描述为一次成功，并将 AI 定位为未来五年漏洞研究的背景。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 这个讨论帖主要是在怀旧：读者们交流自己最喜欢的期号（第 49 期的「Smashing The Stack For Fun And Profit」、第 36 期、第 37 期的磁条文章、第 69 期关于 Shockwave 的内容），交换 blue boxing 工具名称，回忆 ANSI 艺术和 eMule，还有几个人询问是否有纸质版，或讨论在电子阅读器上阅读长文。唯一一个实质性的安全问题——Phrack 里的 Docker 逃逸是否属于提前披露并且有 CVE——由文章作者本人作答，他说那篇文章描述的是一种可复用的利用原语而非某个具体漏洞，因此没有什么可上报的。讨论后期气氛转差：一位评论者称某篇文章是「slop」，其他人把文章丢给 AI 检测工具 Pangram 检测并声称 100% 由 AI 撰写，而另一些人用自己 LLM 时代之前的写作也被判为 AI 生成来反驳。另有一个子讨论指出，Skia 那篇论文的作者 Quang Luong 同一天也发布了一个 CVE。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540259"&gt;andersonc0d3&lt;/a&gt;: Docker/vDSO 那篇论文的作者解释说，该文记录的是一个漏洞利用原语，而不是某个具体的 bug，因此没有需要披露的漏洞。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50543099"&gt;theseamusjames&lt;/a&gt;: 指出 Skia 沙箱逃逸一文的作者 Quang Luong 在同一天发布了 java4shell CVE（calif.io/java4shell），据称导致 NSA 和 Apple 的服务下线。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542748"&gt;khafra&lt;/a&gt;: 质疑 Pangram 的 AI 检测结论：此前悬赏约 1000 美元，征集可验证为 2019 年之前人类撰写、却被判为 AI 生成比例超过 75% 的文本，至今只有一首古怪而重复的诗来认领过。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50541619-zh-cn</id>
-    <title>Claude 在大规模蛋白质序列上进行了训练</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-14"/>
-    <published>2026-11-18T07:59:46+00:00</published>
-    <updated>2026-11-18T07:59:46+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 19 名 · &lt;a href="http://xinmingtu.cn/blog/2026/claude-opus-5-5-protein-sequences/"&gt;xinmingtu.cn&lt;/a&gt; · 37 分 · 11 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50541619"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Claude was trained on protein sequences at scale&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Xinming Tu 和 Leo Tianlai Chen 的博客文章（代码、测试集和输出在 llm-bioseq-probe 仓库中）提出，近期的 Claude 模型吸收了蛋白质序列数据，而不仅是关于蛋白质的文字描述。他们在来自 167 个功能未知的 Pfam 家族的 668 个鲜有研究的细菌和古菌蛋白质上测试下一个氨基酸预测，每个蛋白质在五个位置切开，将真实序列与同一蛋白质的乱序副本对比打分；Claude Fable 5.2 在真实蛋白质上预测下一个残基的正确率为 54%，而在乱序版本上为 9%，Opus 5.5 显示出较小但明显的差距，且随家族规模增大而扩大，而 GPT、Gemini 和七个开放权重模型（包括 DeepSeek V4.1 Flash、Qwen 3.8、Kimi K3.1 Pro）则接近零。Fable 5.2 超过了他们运行的所有开放蛋白质语言模型，包括 ProtGPT3-10B 和 ProGen3-3B，而 Opus 5.5 与 ProtGPT3-10B 大致持平；这一效应在完全没有论文的家族中依然存在，且不依赖于扩展思考。他们还报告称，Opus 5.5 能处理编码 DNA，但不能处理非编码序列，由此得出结论：这些模型学到的是蛋白质而非基因组。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 该讨论串很短，大多是怀疑或跑题的，而非技术性的：没有人替 GPT 或 Gemini 辩护，但也没有人独立核对这些数字。最尖锐的问题是，一个乱序蛋白质为何会有任何「正确」的下一个残基——一位评论者称这是一个奇怪的控制组，回复则解释说，这是为了检验模型是在利用序列顺序，而不仅仅是氨基酸频率（「Q 后面通常跟 u」的类比），这正是作者所描述的设计。一位从业者报告了一个与论文相符的实际障碍：Claude Opus 5.5 在他们自己的 DNA 工作上大约有一半时间会拒绝，而文章本身也指出，使用政策过滤器拦截了 Fable 5 的 44% 的问题。其他人则从商业角度解读这种拒绝行为——预测「解锁」生物学访问将成为一个认证步骤和相应的价格标签，正如安全研究领域那样——而一个分支讨论则问下一个残基预测究竟有什么用，得到的回答包括从片段组装蛋白质和推断祖先序列。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542668"&gt;eddiewithzato&lt;/a&gt;: 第一手报告称，Claude Opus 5.5 在该评论者自己的 DNA 数据上拦截了大约 50% 的提示词，这是论文不得不绕过的 API 拒绝的日常版本。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542910"&gt;octoberfranklin&lt;/a&gt;: 提出了关键的方法论反对意见：乱序蛋白质在自然界中并不存在，那么是什么让某个延续成为「正确」——讨论串中的回答是，这是针对仅凭频率猜测的控制组。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50543122"&gt;_ink_&lt;/a&gt;: 推测与生物相关的拒绝行为将变成一个付费层级，通过认证步骤解锁一个不受限制的模型，这与安全研究的访问方式类似。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50538303-zh-cn</id>
-    <title>哈佛研究人员发现，AI 编码代理把瓶颈转移到了代码评审上</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-15"/>
-    <published>2026-11-18T07:59:45+00:00</published>
-    <updated>2026-11-18T07:59:45+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 20 名 · &lt;a href="https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/"&gt;complexdiscovery.com&lt;/a&gt; · 164 分 · 214 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50538303"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Harvard researchers find AI coding agents shifted the bottleneck to code review&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;ComplexDiscovery 综述了一篇哈佛大学的工作论文，作者是博士生 Fiona Chen 和 James Stratton（论文日期为 2026 年 8 月 4 日，尚未完成同行评审）。该研究把 Jellyfish 的工程分析数据与 Revelio Labs 的 LinkedIn 数据关联起来，覆盖了 718 家公司、725,938 名员工。采用该技术的公司里，工程师增加的代码行数约为 30%（在 5,017 行的基线上达到每个工人月 1,494 行），commit 数上升 20%，PR 数上升 23%，但真正完成并进入生产的 Jira 工单只增加了 0.12（基线为 3.67），在统计上与零无法区分；同时 PR 从提交到合并的时间增加了 3.45 天（基线为 7.03 天，即 49%），正式的变更请求从 13% 几乎翻倍。作者认为，更快的起草要么是淹没了数量固定的评审者，要么意味着草稿质量更低；他们还指出 AI 评审工具并没有帮上忙：到 2026 年 3 月，近 80% 的公司都在使用某种 AI 评审工具，但只有 10.8% 的 PR 得到过哪怕一条 AI 评论。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 压倒性的反应是「那还用说」—— 数十位评论者表示，任何在职工程师一年前就看出来了，并嘲讽哈佛居然把这个当论文发表；不过也有少数人反驳说，对业内人士显而易见并不等于有证据。这个帖子之所以值得一读，是因为数字背后的实践细节：评审者描述如今一整天都在点批准而不是写代码所带来的决策疲劳；有些团队里作者直接批准自己由 agent 生成的 PR；agent 写出了没人信任的代码，导致 PR 生命周期被拉长。另一派认为，解决办法是放弃逐行评审（更重的规格说明、测试、CI 护栏、AI 初审），而其他人反驳说「agent 审 agent」是无穷递归，而且 SOC-2 和变更咨询流程在法律上假定确实有真人读过 diff。一个反复出现的子话题把问题归咎于糟糕的规格说明和组织失调，而不是 AI；还有几个人指出，随着模型变强，这项研究的数据窗口使它成了一个滞后指标。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541141"&gt;AlwaysRock&lt;/a&gt;: 一位整天评审 AI 写的代码（自己的和同事的）的评审者直言，他并不享受这个过程。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541202"&gt;0x696C6961&lt;/a&gt;: 把问题定性为决策疲劳：过去写代码能穿插着做决定，现在做决定就是全部工作。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539720"&gt;prmoustache&lt;/a&gt;: 第一手报告称，开发者让 agent 提交并开 PR，然后自己批准自己的工作，绕过了第二双眼睛，最终没有任何人真正评审。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50540472-zh-cn</id>
-    <title>Cerebras 解耦推理</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-16"/>
-    <published>2026-11-18T07:59:44+00:00</published>
-    <updated>2026-11-18T07:59:44+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 21 名 · &lt;a href="https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference"&gt;cerebras.ai&lt;/a&gt; · 72 分 · 17 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50540472"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Cerebras Disaggregated Inference&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Cerebras 发布的一篇博客文章，宣布其解耦推理架构——用 AMD Instinct GPU 做 prefill、用 Cerebras CS-3 晶圆级系统做 decode——已在 Cerebras Inference Cloud 上投入生产。11 月 14 日在共享的 GPT-OSS-120B 端点上实测，该拆分方案每兆瓦吞吐量是纯 CS-3 配置的 5 倍，且 tokens/sec 无损。Cerebras 将其归因于 decode 受内存带宽限制，而其片上 SRAM（据称是 GB300 GPU 的 350 倍 SRAM 和 5,400 倍带宽）。它提供完整技术栈（解耦框架、vLLM/SGLang prefill 引擎、Cerebras decode 引擎、通过 RDMA 搬运 KV cache 的 KV Portal）以及一个仅 decode 的 SDK，早期访问合作伙伴包括 AWS、Fireworks AI、Gimlet Labs 和 General Compute，并计划到 2027 年底达到数百兆瓦规模。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串分裂为技术热情与做空机构助推的怀疑两派。几位评论者对 prefill/decode 解耦能扩展到晶圆级芯片表示印象深刻，并提出实际的后续问题：通过 RDMA 传输 KV 是否会吃掉收益（尤其是对 DeepSeek 这类高度压缩的 cache），这是否能实现真正的 prefix caching 并把节省的成本让给客户，以及究竟在哪里能在 Cerebras 上运行 Kimi。更大的争论围绕 2026 年 10 月 Culper Research 的做空报告展开，该报告称 Cerebras 为了让晶圆保持高温而运行「ghost tokens」耗费电力，使寿命缩短三倍，并在其 S-1 中将设备可用寿命从 1.5–3 年改为 3–5 年——一位 Cerebras 工程师逐条回应，称 CS-3 运行温度低于 65C，退役率不到半个百分点，且博客解释了折旧变更，而一位批评者反驳说「已退役」回避了翻新/RMA 问题，并从申报时间线论证云端的解释不可能是因果性的，因为该云服务早在 2025 年 12 月那份仍采用较短寿命的申报之前就已推出。一个附带争论是闲置功耗是否真的重要：一派认为 AI 集群受容量限制，因此没人应该让机器闲置，另一派则回答说真实集群、尤其是大学的集群，有 50–80% 的时间处于闲置状态。粗略共识：跨厂商的 prefill/decode 拆分是真正的工程壮举；会计和寿命问题仍未解决。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540912"&gt;eh8&lt;/a&gt;: 一位 Cerebras 员工反驳做空报告：CS-3 平均温度低于 65C（远低于热极限），「ghost tokens」并非 Cerebras 独有，3 倍寿命的说法是对 GPU 数据的推断，而已部署的 CS-3 晶圆中不到 0.5% 已退役。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542473"&gt;augment_me&lt;/a&gt;: 逐份申报文件梳理出一条时间线，论证博客对可用寿命翻倍的解释并非因果——云服务于 2024 年 8 月上线，但 2025 年 12 月的 DRS 仍使用 1.5–3 年，而这一变更是 2026 年 4 月在 IPO 前夕落定的，并把 2026 年上半年的毛利率从 24.0% 提升到 29.9%。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542319"&gt;speedping&lt;/a&gt;: 提出了关键的技术问题：跨系统传输 KV cache 要花多少时间，以及对于像最新 DeepSeek 那样使用超压缩 cache 的模型，收益是否会更大。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50538184-zh-cn</id>
-    <title>Tencent Hy4 Flash</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-17"/>
-    <published>2026-11-18T07:59:43+00:00</published>
-    <updated>2026-11-18T07:59:43+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 28 名 · &lt;a href="https://hy.tencent.ai/research/hy4-flash"&gt;hy.tencent.ai&lt;/a&gt; · 112 分 · 15 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50538184"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;所链接的页面是腾讯为 Hy4 Flash 发布的研究公告，但该页面在不启用 JavaScript 的情况下几乎呈现不出可读文本，因此具体细节主要来自评论者。评论者称它是一个 224B 参数的模型，约有 64B ngrams/engrams，定价低于 DeepSeek 1017 和 GPT-6 Luna，并指出腾讯表示会发布开放权重。最具体的外部数据点是帖中引用的一项 Plotly 基准测试：Hy4 Flash 以 $0.13 回答了 43 个数据分析问题，而在昂贵的前沿模型上大约需要 $20。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;未能读取原文：page had almost no readable text (probably needs JavaScript or a login)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论主要围绕价格与性能的比较，而非架构：评论者把 Hy4 Flash 与 GLM-5.3 Flash（320B）、Qwen3.8 Flash Next（180B）和 DeepSeek Flash v4.1（552B，更强但价格是 4 倍以上）放在一起对比，有几个人说便宜又快的这一档才是他们日常真正在用的。热情主要集中在更小的 224B 体量上——人们猜测它可以在单台 128GB 机器或一台 DGX Spark 上以 3-4 bit 运行，并把 ngrams 卸载到 SSD——他们还希望第三方服务商能以比 DeepSeek 4.1 Flash 在 OpenRouter 上 200-400 tps 更快的速度提供它。反面的意见很实际：一位用户发现更早的 Hy4 在 OpenRouter 上不可靠，在做基础纠错时有大量损坏的响应；其他通过 OpenRouter 测试过 Hy4 Flash 的人说它不错但很慢，希望更多服务商接入。对于核心结论——便宜、够用、开放权重——并没有真正的分歧，分歧只在于可靠性和服务速度能否站得住。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540077"&gt;chriddyp&lt;/a&gt;: Plotly 的基准测试作者报告称，Hy4 Flash 在「便宜且准确」这一端击败了 GPT-6 Luna，43 个数据分析问题花费 $0.13，而前沿模型约需 $20，并给出了完整文章的链接。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542324"&gt;ketzu&lt;/a&gt;: 一位在 OpenRouter 上用更早的 Hy4 做基础纠错的用户说，可靠性简直是噩梦，有大量损坏的响应；这提醒人们不要假定 Flash 已经继承了修复。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542325"&gt;anon373839&lt;/a&gt;: 一位评论者推演了本地运行的可行性：把 ngrams 卸载到 SSD 后内存中还剩 160B，问题随之变成它能否在单台 128GB 机器上以约 3 bpw 装下并保持性能，或者至少能否在 4 bpw 下胜过 Qwen Flash Next。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50536468-zh-cn</id>
-    <title>Launch HN: StarSling（YC P25）——面向 agent 高吞吐量仓库的自我改进 CI</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-18"/>
-    <published>2026-11-18T07:59:42+00:00</published>
-    <updated>2026-11-18T07:59:42+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 29 名 · &lt;a href="https://starsling.dev"&gt;starsling.dev&lt;/a&gt; · 66 分 · 37 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50536468"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Launch HN: StarSling (YC P25) – Self-improving CI for agent-volume repos&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;StarSling 是一家处于发布阶段的 YC P25 创业公司，销售可直接替换 GitHub Actions 的 runner，运行在第五代 AMD EPYC（Zen 5）microVM 上，4 vCPU/16 GB 配置定价为 $0.008/分钟，而 GitHub 为 $0.012/分钟，支持无限并发、按秒计费，排队时间不收费。其差异化优势是一个 agent 循环（基于 Mastra 构建），它会读取 workflow 文件、运行日志和机器遥测数据，将提议的改动与未改动的 workflow 进行基准对比，检查统计显著性，并提交 PR——据称成果包括 Mastra 最慢的 workflow 从 29m56s 降到 5m06s（5.87 倍），better-auth 中一个测试 job 提速 5.4 倍，以及对公开仓库的基准测试达到 3.9 倍到 36.4 倍。它还推介了持久化的「StarSling Disks」（一个 4.5 GiB 的 pnpm store 约 25 秒就绪，比 actions/cache 快 4.5 倍）、GPU runner、review runner、2,000 分钟免费额度，以及一项「CI Challenge」：如果无法将你的账单降低 10%，就赔付 $1,000。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 最有实质内容的反对意见来自 colek42，他认为真正重要的指标是可部署合并到 main 的次数，而且随着 agent 数量上升，流水线式 CI 的算术会失效：关键在于有多少个不冲突的改动可以同时在途、关键路径有多长，以及你把这条路径跑多少次（通常在 agent 循环、CI 和合并队列中要跑 2-3 遍），这也是为什么多数组织停在每小时约 12 个 PR 左右——dbworku 接受了这一观点，并说多数团队仍在朝每小时 100 个 PR 努力。jwilliams 从另一面描述了同样的问题：他的 agent 在推送前会运行 tsc、lint 和单元测试，提交里带一个 git trailer，让 PR 构建跳过这些检查，而所有要进 main 的内容仍然完整运行——构建时间从约 10 分钟降到 1.5 分钟，他称之为「穷人版 Bazel」。emscb 指出了纯速度优化中显而易见的漏洞（分片或裁剪测试看起来永远是收益），yonasb 回应说，只有当打过补丁的运行和基线运行执行了完全相同的测试 ID 和覆盖率时，该补丁才算数；重新分片会进行成本检查，默认将 runner 时间增长上限设为 5%；而判断某个测试是否「应该」删除，目前还不是这些 agent 会做的事。esafak 怀疑整个前提——买 runner 的人本来就在自己做优化，他们在意的是延迟、成本、调度、可靠性、可观测性、本地可复现性，以及不用写 YAML——yonasb 大体上承认了这一点，把 workflow 优化定位为最容易取得的第一个成果。其他方面：有人抱怨这个名字听起来像太空创业公司；来自 Better Auth 和 Mastra 的第一手推荐；以及人们对这些 agent 实际发现了什么感到好奇（测试中的长时间 sleep、单个慢速测试拖累某个分片、一行 20 行的修复让 48K star 的 gogs 获得 5 倍加速）。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50537612"&gt;colek42&lt;/a&gt;: 认为真正的指标是可部署合并到 main 的次数，并阐述了为什么随着 agent 数量增长，流水线式 CI 会把多数组织限制在每小时约 12 个 PR。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540069"&gt;jwilliams&lt;/a&gt;: 第一手经验：把 agent 运行的检查记录为 git trailer，让 PR 构建跳过它们，将构建时间从约 10 分钟缩短到 1.5 分钟，同时 main 仍然运行所有内容。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540594"&gt;yonasb&lt;/a&gt;: 创始人对 agent PR 如何避免钻速度空子的详细回答：要求测试 ID 和覆盖率完全一致；以及在 agent 将成本推高 10 倍后加入的默认 5% runner 时间成本上限。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50537290-zh-cn</id>
-    <title>Web Browser Engineering（2021）</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-19"/>
-    <published>2026-11-18T07:59:41+00:00</published>
-    <updated>2026-11-18T07:59:41+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 30 名 · &lt;a href="https://browser.engineering/"&gt;browser.engineering&lt;/a&gt; · 160 分 · 21 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50537290"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Web Browser Engineering (2021)&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;这是《Web Browser Engineering》的落地页，该书由 Pavel Panchekha 和 Chris Harrelson 合著，用几千行 Python 代码带你从零构建一个基础但完整的浏览器：网络、HTML/CSS 解析、布局、绘制、表单提交、DOM 与事件、Cookie、XSS/CSRF、合成、事件循环与渲染管线、动画、无障碍。该书由 Oxford University Press 出版，日文版由 O&amp;#x27;Reilly 发行，另有配套博客、论坛，以及一份基于该书授课的课程列表。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论串里大多是热情的赞誉：读者称这是对「为什么说浏览器比操作系统还复杂」最清晰的解释，一位在七月读完整本书的评论者还贴出了自己的阅读心得。合著者 Panchekha 回答了提问，提到这本书从 2019 年写到 2024 年底、2025 年出版，全程没有 AI 参与；他还解释说，自己之所以选 .engineering 这个顶级域名，是因为他把 TLD 列表扫了一遍——一本讲浏览器的书总得有个 URL。一位正深陷自己浏览器项目的读者（约 78 万行 C 代码，横跨 30 个库，已有 HTML/CSS 解析、字体光栅化和 WASM 运行时，但还没有 JS 引擎）说，这本书把他推向了布局引擎。唯一真正的争论围绕附录里的一句话——那句话称 WebAssembly 有可能「与 JavaScript 平起平坐」：一位评论者认为这是误读了 wasm 的定位，wasm 是一个兼容性与性能层，API 是被刻意限制的，并说这让他不再信任书中其他的直觉培养；另一位 wasm 用户则回复说，这个描述听起来是准确的；作者强调这句话只出现在「我们没有涵盖的内容」这一附录里，并未对 wasm 应该变成什么样表达任何观点。其他人则照例跟帖，表达了对「WASM 黑盒」式 UI 的悲观看法，也有人指出这类框架仍然可以渲染到 DOM 而不是 canvas 上。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539181"&gt;coreyp_1&lt;/a&gt;: 一位用 C 从零手写自己浏览器的读者描述了他已经完成的部分——图片格式读取器、HTML/XML/CSS 解析器、文本光栅化、支持 TTF 但不支持 WOFF、一个正则引擎以及部分 WASM——并说自己才刚到布局引擎。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50537899"&gt;sublinear&lt;/a&gt;: 有力的反驳：附录里那句说 WASM「与 JavaScript 平起平坐」的话，错误地描述了 wasm 作为兼容性与性能层、API 被刻意限制的角色，也让这位读者怀疑书中其余部分的直觉培养是否可信。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50540217"&gt;pavpanchekha&lt;/a&gt;: 作者解释说他选 .engineering 顶级域名，是真的把 TLD 列表从头翻了一遍，理由是：一本讲浏览器的书需要一个 URL，就像它需要一个书名一样；而且 web.browser.engineering 也能用。&lt;/li&gt;&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <id>tag:hn.due.io,2026:hn-story-50535740-zh-cn</id>
-    <title>不是所有东西都需要 LLM</title>
-    <link rel="alternate" type="text/html" href="https://hn.due.io/zh-cn/2026/11/18/0800/#story-20"/>
-    <published>2026-11-18T07:59:40+00:00</published>
-    <updated>2026-11-18T07:59:40+00:00</updated>
-    <content type="html">&lt;p&gt;&lt;em&gt;HN 第 32 名 · &lt;a href="https://newsletter.posthog.com/p/decision-models"&gt;newsletter.posthog.com&lt;/a&gt; · 146 分 · 59 条评论 · &lt;a href="https://news.ycombinator.com/item?id=50535740"&gt;HN 讨论&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;em&gt;原标题: Not Everything Needs an LLM&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;PostHog 的一篇 newsletter 文章，作者 Jina Yoon 认为，许多交给前沿 LLM 的任务应当交给像 Jev（来自 TypeSafe AI）这样的「决策模型」：这类模型接收一个结构化问题，返回一个带类型的答案以及一个概率。PostHog 称，这类模型比前沿模型便宜最多 444.6 倍、快 193.6 倍，并介绍了生产环境中的用法：在 Replay Vision 中为 PII 清洗设置门槛，使 98.7% 的会话摘要跳过 Gemini 调用；把 Slack 机器人的请求路由到最便宜且足够胜任的模型；对 embedding 搜索结果重排序（在 20 条测试查询上约好 25%）；为 SQL 结果挑选图表，默认使用混合的「Jeeves」模型。文章警告说，阈值无法在不同模型版本或不同任务之间迁移，0.85 的分数仍意味着每 1,000 次检查约 150 次错误，而且多步推理会失效：为「Highlights」信息流把多个问题串联起来，把模型服务器压垮了；对 PR 审查 agent 的发现进行排序，AUC 只有 0.52。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;讨论&lt;/strong&gt;: 讨论中最尖锐的一条线索是定义问题：几位评论者说，「决策模型」不过是一个不生成、也未做指令微调的 LLM，就像 BERT，只是换了名字来避开 LLM 这个标签；辩护者则认为真正的要点在架构上：输出无法超出给定的选项，而且大致相当于单 token 解码，所以更便宜也更快。两条技术性反对意见获得认同：现在训练一个 reranker 很容易，很多 reranker 本来就返回校准过的分数，所以用更大更慢的决策模型做 reranker 是个奇怪的取舍；而用它当模型路由器也很可疑，因为除了你粘贴进去的那段简介，它对新模型一无所知。一位评论者直接质疑校准的说法：没有明显理由说明 0.85 表示 85% 正确，而不是 0.75 或 0.9；有人回复表示同意，说这个分数是模型的置信度，而不是正确概率。另有一组人对「PostHog 竟然要在客户会话录像上运行任何模型」这一前提抱有敌意。讨论还延伸到 LLM 被滥用的轶事（为排序一个 dict 列表而调用一次 LLM；填三个 Jira 工单花了 10 分钟，而以前只要两分钟），以及一个长长的子线程，主张在拥有覆盖长尾客户的 evals 之前不应降级模型，并给出了具体的惨痛案例：合成测试集加上无人监控的 LLM 评审，让故障持续了几个月。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;值得一读的评论&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50541184"&gt;TacticalCoder&lt;/a&gt;: 直接质疑校准这一前提：没有任何东西能证明 0.85 的输出真的是 0.85，而不是 0.75 或 0.9，并追问人们如何验证这一点。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50539552"&gt;orbital-decay&lt;/a&gt;: 去魅式纠正：决策模型仍然是 LLM，只不过像 BERT 那样不生成、也未经指令微调，所以「不是 LLM」的说法只是营销。&lt;/li&gt;&lt;li&gt;&lt;a href="https://news.ycombinator.com/item?id=50542029"&gt;perrygeo&lt;/a&gt;: 一个惨痛案例：用一次 LLM 调用来按键排序一个字典列表，耗时从毫秒变成秒，并讽刺地称之为「0.001 倍速开发者」。&lt;/li&gt;&lt;/ul&gt;</content>
   </entry>
 </feed>
